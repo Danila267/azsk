@@ -7,7 +7,10 @@
                 </div>
             </div>
             <div class="header__upper-part--second">
-
+                <p class="header__upper-part--second__column">МАГАЗИН</p>
+                <p class="header__upper-part--second__column">О НАС</p>
+                <p class="header__upper-part--second__column">КОНТАКТЫ</p>
+                <p class="header__upper-part--second__column">БЛОГ</p>
             </div>
             <div class="header__upper-part--third">
 
