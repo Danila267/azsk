@@ -11,9 +11,20 @@
                 <p class="header__upper-part--second__column">О НАС</p>
                 <p class="header__upper-part--second__column">КОНТАКТЫ</p>
                 <p class="header__upper-part--second__column">БЛОГ</p>
+                <p class="header__upper-part--second__column">КОРЗИНА</p>
             </div>
-            <div class="header__upper-part--third">
+            <!-- <div class="header__upper-part--third">
 
+            </div> -->
+        </div>
+        <div class="header__lower-part">
+            <div class="header__lower-part--first">
+
+            </div>
+            <div class="header__lower-part__search-block">
+                <div class="header__lower-part__search-block__search">
+
+                </div>
             </div>
         </div>
     </nav>
@@ -32,14 +43,14 @@ export default {
         width: 100%;
         margin: 0;
         padding: 0;
-        display: flex;
+        // display: flex;
         height: 11.5em;
         background-color: red;
     }
     .header__upper-part {
         width: 100%;
         display: flex;
-        position: relative;
+        position: absolute;
         justify-content: flex-start;
         top: 0;
         background-color: blue;
@@ -59,6 +70,11 @@ export default {
         background-color: white;
         // flex-grow: 0.6;
         flex-shrink: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 0;
     }
     .header__upper-part--third {
         background-color: magenta;
@@ -86,4 +102,63 @@ export default {
         border-radius: 100%;
         z-index: 300;
     }
+    .header__upper-part--second__column {
+        width: auto;
+        height: 2em;
+        font-size: 1.5em;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        min-width: 0;
+    }
+    .header__lower-part {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 52%;
+        background-color: green;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .header__lower-part--first {
+        width: 22.5em;
+        // min-width: 22.5em;
+        height: 100%;
+        display: flex;
+        position: relative;
+        // left: 50%;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        flex-shrink: 0;
+    }
+    .header__lower-part__search-block {
+        // max-width: 70%;
+        min-width: 0;
+        // min-width: 22.5em;
+        height: 100%;
+        display: flex;
+        position: relative;
+        // left: 50%;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        flex-shrink: 8;
+    }
+    .header__lower-part__search-block__search {
+        width: 582px;
+        height: 73.3px;
+        display: flex;
+        position: relative;
+        justify-self: center;
+        background-color: blue;
+        border-radius: 80px;
+        flex-shrink: 8;
+    }
+
 </style>
