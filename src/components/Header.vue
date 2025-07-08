@@ -27,6 +27,10 @@
                 </div>
             </div>
             <div class="header__lower-part--third">
+                <img src="../assets/facebook8.png" alt="." class="header__lower-part--third__social">
+                <img src="../assets/whatsapp6.png" alt="." class="header__lower-part--third__social">
+                <img src="../assets/vk2.png" alt="." class="header__lower-part--third__social">
+                <img src="../assets/instagram5.png" alt="." class="header__lower-part--third__social">
 
             </div>
         </div>
@@ -176,6 +180,11 @@ export default {
         background-color: pink;
         flex-grow: 3;
         flex-shrink: 0;
+    }
+    .header__lower-part--third__social {
+        // width: 4em;
+        height: 4em;
+        object-fit:contain;
     }
 
 </style>
