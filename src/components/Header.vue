@@ -21,10 +21,13 @@
             <div class="header__lower-part--first">
 
             </div>
-            <div class="header__lower-part__search-block">
-                <div class="header__lower-part__search-block__search">
+            <div class="header__lower-part--second">
+                <div class="header__lower-part--second__search">
 
                 </div>
+            </div>
+            <div class="header__lower-part--third">
+
             </div>
         </div>
     </nav>
@@ -136,7 +139,7 @@ export default {
         background-color: black;
         flex-shrink: 0;
     }
-    .header__lower-part__search-block {
+    .header__lower-part--second {
         // max-width: 70%;
         min-width: 0;
         // min-width: 22.5em;
@@ -150,7 +153,7 @@ export default {
         background-color: orange;
         flex-shrink: 8;
     }
-    .header__lower-part__search-block__search {
+    .header__lower-part--second__search {
         width: 582px;
         height: 73.3px;
         display: flex;
@@ -159,6 +162,20 @@ export default {
         background-color: blue;
         border-radius: 80px;
         flex-shrink: 8;
+    }
+    .header__lower-part--third {
+        width: 25em;
+        // min-width: 22.5em;
+        height: 100%;
+        display: flex;
+        position: relative;
+        // left: 50%;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+        flex-grow: 3;
+        flex-shrink: 0;
     }
 
 </style>
