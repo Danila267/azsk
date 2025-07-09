@@ -31,19 +31,19 @@ export default {
         height: 80vh;
         position: relative;
         display: flex;
-        background-color: blue;
+        background-color: #01002F;
         justify-content: center;
         align-items: flex-start;
     }
     .homeprice__block {
         max-width: 1690px;
         height: auto;
-        background-color: cadetblue;
+        background-color: 01002F;
         position: relative;
         display: flex;
     }
     .homeprice__block--left {
-        background-color: darkred;
+        background-color: 01002F;
         flex-grow: 0;
         flex-shrink: 0;
         display: flex;
@@ -83,7 +83,7 @@ export default {
         display: flex;
         margin-left: 105px;
         margin-top: 60px;
-        background-color: burlywood;
+        background-color: #01002F;
     }
     .homeprice__block--left__buttonline__button--first {
         max-width: 265px;
@@ -95,6 +95,13 @@ export default {
         background-color: #8D8CDA;
         border: 0px #8D8CDA solid;
         border-radius: 80px;
+        transition: all 0.3s ease;
+    }
+    .homeprice__block--left__buttonline__button--first:hover {
+        transform: translateY(-8px);
+        box-shadow: 5px 10px 20px #94CFD0;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
     .homeprice__block--left__buttonline__button--second { 
         max-width: 334px;
@@ -106,6 +113,13 @@ export default {
         border: 5px #94CFD0 solid;
         border-radius: 80px;
         background-color: #01002F;
+        transition: all 0.3s ease;
+    }
+    .homeprice__block--left__buttonline__button--second:hover {
+        transform: translateY(-8px);
+        box-shadow: 5px 10px 20px #94CFD0;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
     .homeprice__block--right { // ***TODO***
         width: 768px;
