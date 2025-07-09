@@ -36,21 +36,22 @@ export default {
         align-items: flex-start;
     }
     .homeprice__block {
-        width: 1690px;
-        height: 650px;
+        max-width: 1690px;
+        height: auto;
         background-color: cadetblue;
         position: relative;
         display: flex;
     }
     .homeprice__block--left {
         background-color: darkred;
-        // flex-grow: 0.6;
-        flex-shrink: 3;
+        flex-grow: 0;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        min-width: 800px;
+        min-width: 0;
+        max-width: 922px;
     }
     .homeprice__block--left__title {
         width: auto;
@@ -95,7 +96,7 @@ export default {
         border: 0px #8D8CDA solid;
         border-radius: 80px;
     }
-    .homeprice__block--left__buttonline__button--second {
+    .homeprice__block--left__buttonline__button--second { 
         max-width: 334px;
         height: 80px;
         margin-left: auto;
@@ -106,7 +107,7 @@ export default {
         border-radius: 80px;
         background-color: #01002F;
     }
-    .homeprice__block--right {
+    .homeprice__block--right { // ***TODO***
         width: 768px;
         height: auto;
         object-fit: contain;
