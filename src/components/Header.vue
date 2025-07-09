@@ -22,9 +22,9 @@
 
             </div>
             <div class="header__lower-part--second">
-                <div class="header__lower-part--second__search">
-
-                </div>
+                <input placeholder="поиск..." class="header__lower-part--second__search">
+                    <!-- <input type="text" class="header__lower-part--second__search__input"> -->
+                <!-- </input> -->
             </div>
             <div class="header__lower-part--third">
                 <img src="../assets/facebook8.png" alt="." class="header__lower-part--third__social">
@@ -163,10 +163,34 @@ export default {
         display: flex;
         position: relative;
         justify-self: center;
-        background-color: blue;
+        background-color: #01002F;
         border-radius: 80px;
         flex-shrink: 8;
+        padding: 1em 1em;
+        padding-right: 60px;
+        box-sizing: border-box;
+        font-size: 1.75em;
+        border: 5px solid #0306F0;
+        color: #FFFFFF;
+        opacity: 1;
+        font-weight: bold;
+        min-width: 0;
+        background-image: url('../assets/search.png');
+        background-size: 70px;
+        background-repeat: no-repeat;
+        background-position: 50px 10px;
+        background-position-x: right;
+        z-index: 1000;
+        // border-color: purple;
     }
+    .header__lower-part--second__search::placeholder {
+        font-weight: bold;
+        color: #FFFFFF;
+        opacity: 1;
+    }
+    // .header__lower-part--second__search__input {
+
+    // }
     .header__lower-part--third {
         width: 25em;
         // min-width: 22.5em;
@@ -183,7 +207,7 @@ export default {
     }
     .header__lower-part--third__social {
         // width: 4em;
-        height: 4em;
+        height: 3.5em;
         object-fit:contain;
     }
 
