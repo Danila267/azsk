@@ -53,7 +53,7 @@ export default {
         padding: 0;
         // display: flex;
         height: 11.5em;
-        background-color: red;
+        // background-color: red;
     }
     .header__upper-part {
         width: 100%;
@@ -61,7 +61,7 @@ export default {
         position: absolute;
         justify-content: flex-start;
         top: 0;
-        background-color: blue;
+        // background-color: blue;
         height: 48%;
     }
     .header__upper-part--first {
@@ -69,13 +69,14 @@ export default {
         min-width: 22.5em;
         max-width: 22.5em;
         // width: 448.5px;
-        background-color: black;
+        // background-color: black;
+        background-color: #FFFFFF;
         position: relative;
         flex-shrink: 0;
         flex-grow: 0.1;
     }
     .header__upper-part--second {
-        background-color: white;
+        background-color: #FFFFFF;
         // flex-grow: 0.6;
         flex-shrink: 3;
         display: flex;
@@ -95,7 +96,8 @@ export default {
         position: absolute;
         flex-grow: 1;
         height: 162%;
-        background-color: purple;
+        // background-color: purple;
+        background-color: #FFFFFF;
         position: relative;
         z-index: 500;
     }
@@ -111,7 +113,8 @@ export default {
         height: 100%;
         flex-shrink: 0;
         flex-grow: 1;
-        background-color: aqua;
+        // background-color: aqua;
+        background-color: #FFFFFF;
         position: absolute;
         right: -28.5%;
         border-radius: 100%;
@@ -134,7 +137,7 @@ export default {
         bottom: 0;
         left: 0;
         height: 52%;
-        background-color: green;
+        // background-color: green;
         justify-content: flex-start;
         align-items: center;
     }
@@ -148,7 +151,8 @@ export default {
         justify-self: center;
         justify-content: center;
         align-items: center;
-        background-color: black;
+        // background-color: black;
+        background-color: #01002F;
         flex-shrink: 0;
     }
     .header__lower-part--second {
@@ -162,7 +166,8 @@ export default {
         justify-self: center;
         justify-content: center;
         align-items: center;
-        background-color: orange;
+        // background-color: orange;
+        background-color: #01002F;
         flex-shrink: 8;
     }
     .header__lower-part--second__search {
@@ -189,6 +194,7 @@ export default {
         background-position: 50px 10px;
         background-position-x: right;
         z-index: 1000;
+        outline: none;
         // border-color: purple;
     }
     .header__lower-part--second__search::placeholder {
@@ -209,7 +215,8 @@ export default {
         justify-self: center;
         justify-content: center;
         align-items: center;
-        background-color: pink;
+        // background-color: pink;
+        background-color: #01002F;
         flex-grow: 3;
         flex-shrink: 0;
     }
