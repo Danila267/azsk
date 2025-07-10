@@ -27,10 +27,10 @@
                 <!-- </input> -->
             </div>
             <div class="header__lower-part--third">
-                <img src="../assets/facebook8.png" alt="." class="header__lower-part--third__social">
-                <img src="../assets/whatsapp6.png" alt="." class="header__lower-part--third__social">
-                <img src="../assets/vk2.png" alt="." class="header__lower-part--third__social">
-                <img src="../assets/instagram5.png" alt="." class="header__lower-part--third__social">
+                <a href="https://facebook.com"><img src="../assets/facebook8.png" alt="." class="header__lower-part--third__social"></a>
+                <a href="https://whatsapp.com"><img src="../assets/whatsapp6.png" alt="." class="header__lower-part--third__social"></a>
+                <a href="https://vk.ru"><img src="../assets/vk2.png" alt="." class="header__lower-part--third__social"></a>
+                <a href="https://instagram.com"><img src="../assets/instagram5.png" alt="." class="header__lower-part--third__social"></a>
 
             </div>
         </div>
@@ -209,6 +209,13 @@ export default {
         // width: 4em;
         height: 3.5em;
         object-fit:contain;
+        transition: all 0.3s ease;
+    }
+    .header__lower-part--third__social:hover {
+        transform: translateY(-6px);
+        // box-shadow: 5px 10px 20px #94CFD0;
+        transition: all 0.3s ease;
+        cursor: pointer;
     }
 
 </style>

@@ -2,8 +2,13 @@
     <div class="homeprice">
         <div class="homeprice__block">
             <div class="homeprice__block--left">
+                <Transition name="title-appear" appear>
                 <p class="homeprice__block--left__title">Самые <br>Выгодные<br>Цены</p>
+                </Transition>
+                <Transition name="text-appear" appear>
                 <p class="homeprice__block--left__text">Мы предлагаем оборудование для АГЗС и АЗС по лучшим ценам в нашем каталоге</p>
+                </Transition>
+                <Transition name="button-appear" appear>
                 <div class="homeprice__block--left__buttonline">
                     <button class="homeprice__block--left__buttonline__button--first">
                         КАТАЛОГ
@@ -12,8 +17,13 @@
                         НАПИСАТЬ НАМ
                     </button>
                 </div>
+                </Transition>
             </div>
-            <img src="../assets/nasos3.png" alt="" class="homeprice__block--right">
+            <div class="homeprice__block--right">
+                <Transition name="image-appear" appear>
+                <img src="../assets/nasos3.png" alt="" class="homeprice__block--right__img">
+                </Transition>
+            </div>
         </div>
     </div>
 </template>
@@ -26,6 +36,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .title-appear-enter-active {
+        animation: left-appear-in 1.25s ease;
+    }
+    .text-appear-enter-active {
+        animation: left-appear-in 1s ease;
+    }
+    .button-appear-enter-active {
+        animation: down-appear-in 1.1s ease;
+    }
+    .image-appear-enter-active {
+        animation: right-appear-in 1.5s ease;
+    }
+
+
     .homeprice {
         width: 100%;
         height: 80vh;
@@ -77,7 +102,7 @@ export default {
         box-sizing: border-box;
     }
     .homeprice__block--left__buttonline {
-        max-width: 700px;
+        max-width: 650px;
         height: auto;
         position: relative;
         display: flex;
@@ -122,9 +147,63 @@ export default {
         cursor: pointer;
     }
     .homeprice__block--right { // ***TODO***
-        width: 768px;
+        width: 648px;
         height: auto;
+        // flex-shrink: 0;
+        min-width: 648px;
         object-fit: contain;
         margin-right: 6em;
+        animation: animate 5s ease-in-out infinite;
+        animation-name: anima-homeprice-circle;
+        animation-duration: 5s;
     }
+    .homeprice__block--right__img {
+        // box-shadow: 5px 10px 20px #94CFD0;
+        filter: drop-shadow(0 0 1.75rem #94CFD0);
+        // min-width: none;
+        // flex-shrink: 0;
+    }
+
+    @keyframes left-appear-in {
+    0% {
+        transform: translateX(-700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes right-appear-in {
+    0% {
+        transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes down-appear-in {
+    0% {
+        transform: translateY(700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+
+    @keyframes anima-homeprice-circle {
+    0% {
+        transform: translate(0%, -2%);
+    }
+
+    35% {
+        transform: translate(3%, -1%);
+    }
+
+    70% {
+        transform: translate(-3%, 0%);
+    }
+
+    100% {
+        transform: translate(0%, -2%);
+    }
+}
 </style>
