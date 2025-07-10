@@ -3,6 +3,7 @@
         <div class="header__upper-part">
             <div class="header__upper-part--first">
                 <div class="header__upper-part__logo-block">
+                    <img src="../assets/logo.png" alt="" class="header__upper-part__logo-block__img">
                     <div class="header__upper-part__logo-block--circle"></div>
                 </div>
             </div>
@@ -97,6 +98,13 @@ export default {
         background-color: purple;
         position: relative;
         z-index: 500;
+    }
+    .header__upper-part__logo-block__img {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        z-index: 600;
+        left: 10%;
     }
     .header__upper-part__logo-block--circle {
         width: 57%;
