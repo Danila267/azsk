@@ -48,13 +48,14 @@ export default {
 
 <style lang="scss" scoped>
     .header {
-        position: absolute;
+        position: fixed;
         width: 100%;
         margin: 0;
         padding: 0;
         // display: flex;
         height: 11.5em;
         // background-color: red;
+        z-index: 400;
     }
     .header__upper-part {
         width: 100%;
@@ -64,6 +65,7 @@ export default {
         top: 0;
         // background-color: blue;
         height: 48%;
+        z-index: 2000;
     }
     .header__upper-part--first {
         // min-width: 448.5px;
@@ -150,6 +152,7 @@ export default {
         // background-color: green;
         justify-content: flex-start;
         align-items: center;
+        z-index: 300;
     }
     .header__lower-part--first {
         width: 22.5em;

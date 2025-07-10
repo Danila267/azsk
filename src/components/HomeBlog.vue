@@ -8,10 +8,10 @@
                 </p>
                 </Transition>
                 <Transition name="title-appear" appear>
-                <p class="homeblog__block--left__title">Следите за новостями в нашем блоге</p>
+                <p class="homeblog__block--left__title">Следите за новостями <br> в нашем блоге</p>
                 </Transition>
                 <Transition name="text-appear" appear>
-                <p class="homeblog__block--left__text">Gas Market предлагает оборудование для АГЗС и АЗС по лучшим ценам в нашем каталоге</p>
+                <p class="homeblog__block--left__text">Регулярно оповещаем вас на сайте, а также в наших социальных сетях</p>
                 </Transition>
                 <Transition name="button-appear" appear>
                 <div class="homeblog__block--left__buttonline">
@@ -96,7 +96,7 @@ export default {
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
         margin-left: 140px;
-        margin-top: 100px;
+        margin-top: 150px;
     }
     .homeblog__block--left__title {
         width: auto;
@@ -112,7 +112,7 @@ export default {
         box-sizing: border-box;
     }
     .homeblog__block--left__text {
-        max-width: 620px;
+        max-width: 560px;
         height: auto;
         position: relative;
         display: flex;

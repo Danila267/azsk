@@ -32,6 +32,7 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: blue;
+  z-index: 300;
 }
 
 </style>
