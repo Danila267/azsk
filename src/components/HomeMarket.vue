@@ -1,27 +1,32 @@
 <template>
-    <div class="homeprice">
-        <div class="homeprice__block">
-            <div class="homeprice__block--left">
-                <Transition name="title-appear" appear>
-                <p class="homeprice__block--left__title">Самые <br>Выгодные<br>Цены</p>
-                </Transition>
-                <Transition name="text-appear" appear>
-                <p class="homeprice__block--left__text">Gas Market предлагает оборудование для АГЗС и АЗС по лучшим ценам в нашем каталоге</p>
-                </Transition>
-                <Transition name="button-appear" appear>
-                <div class="homeprice__block--left__buttonline">
-                    <button class="homeprice__block--left__buttonline__button--first">
-                        КАТАЛОГ
-                    </button>
-                    <button class="homeprice__block--left__buttonline__button--second">
-                        НАПИСАТЬ НАМ
-                    </button>
-                </div>
+    <div class="homemarket">
+        <div class="homemarket__block">
+            <div class="homemarket__block--left">
+                <Transition name="image-appear" appear>
+                <img src="../assets/prelast4.png" alt="" class="homemarket__block--left__img">
                 </Transition>
             </div>
-            <div class="homeprice__block--right">
-                <Transition name="image-appear" appear>
-                <img src="../assets/nasos3.png" alt="" class="homeprice__block--right__img">
+            <div class="homemarket__block--right">
+                <Transition name="uptitle-appear" appear>
+                <p class="homemarket__block--right__uptitle">
+                    ФАКТЫ
+                </p>
+                </Transition>
+                <Transition name="title-appear" appear>
+                <p class="homemarket__block--right__title">Gas market - лидеры в своём деле</p>
+                </Transition>
+                <Transition name="text-appear" appear>
+                <p class="homemarket__block--right__text">Основанные в 2007 году, вы остаёмся одной из лидирующих фирм по обслуживанию нефтебаз, АЗГС и АЗС.</p>
+                </Transition>
+                <Transition name="button-appear" appear>
+                <div class="homemarket__block--right__buttonline">
+                    <button class="homemarket__block--right__buttonline__button--first">
+                        ЧТО В НАЛИЧИИ
+                    </button>
+                    <!-- <button class="homemarket__block--right__buttonline__button--second">
+                        НАПИСАТЬ НАМ
+                    </button> -->
+                </div>
                 </Transition>
             </div>
         </div>
@@ -31,27 +36,30 @@
 <script>
 
 export default {
-    name: "HomePrice"
+    name: "HomeMarket"
 }
 </script>
 
 <style lang="scss" scoped>
 
     .title-appear-enter-active {
-        animation: left-appear-in 1.25s ease;
+        animation: right-appear-in 1.25s ease;
     }
     .text-appear-enter-active {
-        animation: left-appear-in 1s ease;
+        animation: right-appear-in 1s ease;
     }
     .button-appear-enter-active {
         animation: down-appear-in 1.1s ease;
     }
     .image-appear-enter-active {
-        animation: right-appear-in 1.5s ease;
+        animation: left-appear-in 1.5s ease;
+    }
+    .uptitle-appear-enter-active {
+        animation: right-appear-in 1.3s ease;
     }
 
 
-    .homeprice {
+    .homemarket {
         width: 100%;
         height: 80vh;
         position: relative;
@@ -60,14 +68,31 @@ export default {
         justify-content: center;
         align-items: flex-start;
     }
-    .homeprice__block {
+    .homemarket__block {
         max-width: 1690px;
         height: auto;
         background-color: 01002F;
         position: relative;
         display: flex;
     }
-    .homeprice__block--left {
+    .homemarket__block--left { // ***TODO***
+        width: 648px;
+        height: auto;
+        // flex-shrink: 0;
+        min-width: 648px;
+        object-fit: contain;
+        margin-right: 6em;
+        animation: animate 5s ease-in-out infinite;
+        animation-name: anima-homeprice-circle;
+        animation-duration: 5s;
+    }
+    .homemarket__block--left__img {
+        // box-shadow: 5px 10px 20px #94CFD0;
+        filter: drop-shadow(0 0 1.75rem #94CFD0);
+        // min-width: none;
+        // flex-shrink: 0;
+    }
+    .homemarket__block--right {
         background-color: 01002F;
         flex-grow: 0;
         flex-shrink: 0;
@@ -78,42 +103,54 @@ export default {
         min-width: 0;
         max-width: 922px;
     }
-    .homeprice__block--left__title {
+    .homemarket__block--right__uptitle {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #AAD9D9;
+        font-size: 1.45em;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        margin-top: 100px;
+    }
+    .homemarket__block--right__title {
         width: auto;
         height: auto;
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 5.4em;
+        font-size: 3.56em;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
-        padding-left: 1.5em;
+        // font-family: PT+Sans, 'Source Sans Pro';
+        // padding-left: 1.5em;
         padding-top: 0.35em;
         box-sizing: border-box;
     }
-    .homeprice__block--left__text {
-        max-width: 620px;
+    .homemarket__block--right__text {
+        max-width: 640px;
         height: auto;
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.25em;
+        font-size: 1.35em;
         font-family: 'Outfit', sans-serif;
-        padding-left: 130px;
+        // padding-left: 130px;
         padding-top: 15px;
         box-sizing: border-box;
     }
-    .homeprice__block--left__buttonline {
+    .homemarket__block--right__buttonline {
         max-width: 650px;
         height: auto;
         position: relative;
         display: flex;
-        margin-left: 105px;
+        // margin-left: 105px;
         margin-top: 60px;
         background-color: #01002F;
     }
-    .homeprice__block--left__buttonline__button--first {
-        max-width: 265px;
+    .homemarket__block--right__buttonline__button--first {
+        max-width: 353px;
         height:80px;
         align-self: flex-start;
         font-size: 1.5em;
@@ -124,14 +161,15 @@ export default {
         border: 0px #8D8CDA solid;
         border-radius: 80px;
         transition: all 0.3s ease;
+        margin-left: 70px;
     }
-    .homeprice__block--left__buttonline__button--first:hover {
+    .homemarket__block--right__buttonline__button--first:hover {
         transform: translateY(-8px);
         box-shadow: 5px 10px 20px #94CFD0;
         transition: all 0.3s ease;
         cursor: pointer;
     }
-    .homeprice__block--left__buttonline__button--second { 
+    .homemarket__block--right__buttonline__button--second { 
         max-width: 334px;
         height: 80px;
         margin-left: auto;
@@ -144,28 +182,11 @@ export default {
         background-color: #01002F;
         transition: all 0.3s ease;
     }
-    .homeprice__block--left__buttonline__button--second:hover {
+    .homemarket__block--right__buttonline__button--second:hover {
         transform: translateY(-8px);
         box-shadow: 5px 10px 20px #94CFD0;
         transition: all 0.3s ease;
         cursor: pointer;
-    }
-    .homeprice__block--right { // ***TODO***
-        width: 648px;
-        height: auto;
-        // flex-shrink: 0;
-        min-width: 648px;
-        object-fit: contain;
-        margin-right: 6em;
-        animation: animate 5s ease-in-out infinite;
-        animation-name: anima-homeprice-circle;
-        animation-duration: 5s;
-    }
-    .homeprice__block--right__img {
-        // box-shadow: 5px 10px 20px #94CFD0;
-        filter: drop-shadow(0 0 1.75rem #94CFD0);
-        // min-width: none;
-        // flex-shrink: 0;
     }
 
     @keyframes left-appear-in {

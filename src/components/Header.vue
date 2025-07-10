@@ -1,4 +1,5 @@
 <template>
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <nav class="header">
         <div class="header__upper-part">
             <div class="header__upper-part--first">
@@ -124,11 +125,20 @@ export default {
         width: auto;
         height: 2em;
         font-size: 1.5em;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 500;
         position: relative;
         justify-content: center;
         align-items: center;
         top: 10%;
         min-width: 0;
+        transition: all 0.3s ease;
+    }
+    .header__upper-part--second__column:hover {
+        transform: translateY(-7%);
+        transition: all 0.3s ease;
+        color: rgb(36, 36, 36);
+        cursor: pointer;
     }
     .header__lower-part {
         width: 100%;
