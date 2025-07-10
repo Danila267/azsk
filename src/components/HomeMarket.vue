@@ -13,7 +13,7 @@
                 </p>
                 </Transition>
                 <Transition name="title-appear" appear>
-                <p class="homemarket__block--right__title">Gas market - лидеры в своём деле</p>
+                <p class="homemarket__block--right__title">Gas market - лидеры <br> в своём деле</p>
                 </Transition>
                 <Transition name="text-appear" appear>
                 <p class="homemarket__block--right__text">Основанные в 2007 году, вы остаёмся одной из лидирующих фирм по обслуживанию нефтебаз, АЗГС и АЗС.</p>
