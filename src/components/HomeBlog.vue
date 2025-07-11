@@ -30,6 +30,7 @@
                 </Transition>
             </div>
         </div>
+        <div class="homeblog__light"></div>
     </div>
 </template>
 
@@ -67,6 +68,7 @@ export default {
         background-color: #01002F;
         justify-content: center;
         align-items: flex-start;
+        overflow: hidden;
     }
     .homeblog__block {
         max-width: 1690px;
@@ -74,6 +76,7 @@ export default {
         background-color: 01002F;
         position: relative;
         display: flex;
+        z-index: 300;
     }
     .homeblog__block--left {
         background-color: 01002F;
@@ -130,7 +133,7 @@ export default {
         display: flex;
         margin-left: 105px;
         margin-top: 60px;
-        background-color: #01002F;
+        background-color: rgba($color: #000000, $alpha: 0);
     }
     .homeblog__block--left__buttonline__button--first {
         max-width: 335px;
@@ -187,6 +190,20 @@ export default {
         filter: drop-shadow(0 0 1.75rem #94CFD0);
         // min-width: none;
         // flex-shrink: 0;
+    }
+
+    .homeblog__light {
+        width: 650px;
+        height: 650px;
+        background-color: #0306F0;
+        position: absolute;
+        left: -15%;
+        bottom: -50%;
+        z-index: 200;
+        // filter: drop-shadow(0 0 1.75rem #94CFD0);
+        border-radius: 50%;
+        filter: blur(200px);
+        overflow: hidden;
     }
 
     @keyframes left-appear-in {

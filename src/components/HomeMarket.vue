@@ -74,6 +74,7 @@ export default {
         background-color: 01002F;
         position: relative;
         display: flex;
+        z-index: 300;
     }
     .homemarket__block--left { // ***TODO***
         width: 648px;

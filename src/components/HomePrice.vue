@@ -25,6 +25,7 @@
                 </Transition>
             </div>
         </div>
+        <div class="homeprice__light"></div>
     </div>
 </template>
 
@@ -66,6 +67,7 @@ export default {
         background-color: 01002F;
         position: relative;
         display: flex;
+        z-index: 300;
     }
     .homeprice__block--left {
         background-color: 01002F;
@@ -166,6 +168,19 @@ export default {
         filter: drop-shadow(0 0 1.75rem #94CFD0);
         // min-width: none;
         // flex-shrink: 0;
+    }
+
+    .homeprice__light {
+        width: 650px;
+        height: 650px;
+        background-color: #AAD9D9;
+        position: absolute;
+        right: -15%;
+        bottom: -50%;
+        z-index: 200;
+        // filter: drop-shadow(0 0 1.75rem #94CFD0);
+        border-radius: 50%;
+        filter: blur(200px);
     }
 
     @keyframes left-appear-in {
