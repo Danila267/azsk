@@ -25,7 +25,9 @@
                 </Transition>
             </div>
         </div>
+        <Transition name="light-appear" appear>
         <div class="homeprice__light"></div>
+        </Transition>
     </div>
 </template>
 
@@ -49,6 +51,9 @@ export default {
     }
     .image-appear-enter-active {
         animation: right-appear-in 1.5s ease;
+    }
+    .light-appear-enter-active {
+        animation: light-appear-in 1.75s ease;
     }
 
 
@@ -224,5 +229,19 @@ export default {
     100% {
         transform: translate(0%, -2%);
     }
+    
 }
+
+    @keyframes light-appear-in {
+    0% {
+        transform: translateX(800px) scale(0.35);
+        // transform: scale(0.35);
+        filter: blur(0px);
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        // transform: scale(1);
+        filter: blur(200px);
+    }
+    }
 </style>
