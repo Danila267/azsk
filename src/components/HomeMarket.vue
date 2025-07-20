@@ -90,8 +90,15 @@ export default {
     .homemarket__block--left__img {
         // box-shadow: 5px 10px 20px #94CFD0;
         filter: drop-shadow(0 0 1.75rem #94CFD0);
+        transition: all 0.35s ease;
         // min-width: none;
         // flex-shrink: 0;
+    }
+    .homemarket__block--left__img:hover {
+        transform: scale(1.04);
+        filter: drop-shadow(0 0 2rem #94CFD0);
+        cursor: pointer;
+        transition: all 0.35s ease;
     }
     .homemarket__block--right {
         background-color: 01002F;
@@ -148,7 +155,7 @@ export default {
         display: flex;
         // margin-left: 105px;
         margin-top: 60px;
-        background-color: #01002F;
+        background-color: rgba($color: #000000, $alpha: 0);
     }
     .homemarket__block--right__buttonline__button--first {
         max-width: 353px;

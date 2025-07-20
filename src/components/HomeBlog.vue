@@ -30,7 +30,9 @@
                 </Transition>
             </div>
         </div>
+        <Transition name="light-appear" appear>
         <div class="homeblog__light"></div>
+        </Transition>
     </div>
 </template>
 
@@ -57,6 +59,9 @@ export default {
     }
     .uptitle-appear-enter-active {
         animation: left-appear-in 1.3s ease;
+    }
+    .light-appear-enter-active {
+        animation: light-appear-in 1.75s ease;
     }
 
 
@@ -188,8 +193,15 @@ export default {
     .homeblog__block--right__img {
         // box-shadow: 5px 10px 20px #94CFD0;
         filter: drop-shadow(0 0 1.75rem #94CFD0);
+        transition: all 0.35s ease;
         // min-width: none;
         // flex-shrink: 0;
+    }
+    .homeblog__block--right__img:hover {
+        transform: scale(1.04);
+        filter: drop-shadow(0 0 2rem #94CFD0);
+        cursor: pointer;
+        transition: all 0.35s ease;
     }
 
     .homeblog__light {
@@ -248,4 +260,17 @@ export default {
         transform: translate(0%, -2%);
     }
 }
+
+    @keyframes light-appear-in {
+    0% {
+        transform: translateX(-700px) scale(0.35);
+        // transform: scale(0.35);
+        // filter: blur(0px);
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        // transform: scale(1);
+        // filter: blur(200px);
+    }
+    }
 </style>
