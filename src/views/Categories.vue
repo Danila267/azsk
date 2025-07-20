@@ -1,12 +1,15 @@
 <template>
     <div class="categories">
-        Hello World
+        <CatMain />
     </div>
 </template>
 
 <script>
+import CatMain from '@/components/CatMain.vue';
+
 export default {
-    name: 'Categories'
+    name: 'Categories',
+    components: { CatMain }
 }
 </script>
 
