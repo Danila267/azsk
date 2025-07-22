@@ -4,12 +4,12 @@
         <div class="header__upper-part">
             <div class="header__upper-part--first">
                 <div class="header__upper-part__logo-block">
-                    <img src="../assets/logo.png" alt="" class="header__upper-part__logo-block__img">
+                    <img src="../assets/logo.png" alt="" class="header__upper-part__logo-block__img" @click="redirect('Home')">
                     <div class="header__upper-part__logo-block--circle"></div>
                 </div>
             </div>
             <div class="header__upper-part--second">
-                <p class="header__upper-part--second__column">МАГАЗИН</p>
+                <p class="header__upper-part--second__column" @click="redirect('Categories')">МАГАЗИН</p>
                 <p class="header__upper-part--second__column">О НАС</p>
                 <p class="header__upper-part--second__column">КОНТАКТЫ</p>
                 <p class="header__upper-part--second__column">БЛОГ</p>
@@ -43,6 +43,11 @@
 
 export default {
     name: 'Header',
+    methods: {
+        redirect(el) {
+            this.$router.push({ name: el });
+        }
+    }
 }
 </script>
 
@@ -110,6 +115,9 @@ export default {
         top: 20%;
         z-index: 600;
         left: 10%;
+    }
+    .header__upper-part__logo-block__img:hover {
+        cursor: pointer;
     }
     .header__upper-part__logo-block--circle {
         width: 57%;

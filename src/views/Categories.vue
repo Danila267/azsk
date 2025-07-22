@@ -21,7 +21,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: blue;
+//   background-color: blue;
   z-index: 300;
 }
 </style>

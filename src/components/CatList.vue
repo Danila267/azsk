@@ -2,6 +2,16 @@
     <div class="catlist">
         <CatItem />
         <CatItem />
+        <CatItem /> 
+        <CatItem />
+
+        <CatItem />
+        <CatItem />
+        <CatItem />
+        <CatItem />
+
+        <CatItem />
+        <CatItem />
         <CatItem />
         <CatItem />
     </div>
@@ -22,9 +32,11 @@ export default {
     height: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
-    background-color: red;
-    margin-top: 1em;
+    // background-color: red;
+    margin-top: 2em;
+    gap: 80px;
 }
 </style>

@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .catmain {
     width: 100%;
-    height: 80vh;
+    height: auto;
     position: relative;
     display: flex;
     background-color: #01002F;
@@ -29,7 +29,7 @@ export default {
 .catmain__block {
     max-width: 1690px;
     height: auto;
-    background-color: #afc985;
+    // background-color: #afc985;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -47,5 +47,6 @@ export default {
     padding-left: 0.35em;
     padding-top: 0.35em;
     box-sizing: border-box;
+    // text-shadow: 10px 5px 40px #b0b0c0;
 }
 </style>

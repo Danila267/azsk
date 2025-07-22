@@ -5,12 +5,12 @@ import Categories from '@/views/Categories.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: Home
   },
   {
     path: '/categories',
-    name: 'categories',
+    name: 'Categories',
     component: Categories
   },
 ]
