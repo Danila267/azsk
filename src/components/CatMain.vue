@@ -23,6 +23,7 @@ export default {
     position: relative;
     display: flex;
     background-color: #01002F;
+    // background-color: #0400d4;
     justify-content: center;
     align-items: flex- 
 }

@@ -4,7 +4,7 @@
         <div class="header__upper-part">
             <div class="header__upper-part--first">
                 <div class="header__upper-part__logo-block">
-                    <img src="../assets/logo.png" alt="" class="header__upper-part__logo-block__img" @click="redirect('Home')">
+                    <img src="../assets/logo2.png" alt="" class="header__upper-part__logo-block__img" @click="redirect('Home')">
                     <div class="header__upper-part__logo-block--circle"></div>
                 </div>
             </div>
@@ -115,9 +115,12 @@ export default {
         top: 20%;
         z-index: 600;
         left: 10%;
+        transition: all 0.3s ease;
     }
     .header__upper-part__logo-block__img:hover {
         cursor: pointer;
+        filter: brightness(80%);
+        transition: all 0.3s ease;
     }
     .header__upper-part__logo-block--circle {
         width: 57%;
@@ -217,11 +220,27 @@ export default {
         z-index: 1000;
         outline: none;
         // border-color: purple;
+        transition: all 0.3s ease;
     }
     .header__lower-part--second__search::placeholder {
         font-weight: bold;
         color: #FFFFFF;
         opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .header__lower-part--second__search:hover {
+        // background-color: #02003f;
+        filter: brightness(80%);
+        // border: 0px solid #0306F0;
+        // background-position: 60px 15px;
+        // background-position-x: right;
+        transition: all 0.3s ease;
+    }
+    .header__lower-part--second__search:focus {
+        filter: brightness(80%);
+        border: 0px solid #0306F0;
+        background-position: 60px 15px;
+        background-position-x: right;
     }
     // .header__lower-part--second__search__input {
 
@@ -252,6 +271,7 @@ export default {
         // box-shadow: 5px 10px 20px #94CFD0;
         transition: all 0.3s ease;
         cursor: pointer;
+        filter: brightness(80%);
     }
 
 </style>
