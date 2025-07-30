@@ -23,6 +23,7 @@
                 <Transition name="image-appear" appear>
                 <img src="../assets/nasos3.png" alt="" class="homeprice__block--right__img">
                 </Transition>
+                <!-- <img src="../assets/graynasos.png" alt="" class="homeprice__block--right__img--second"> -->
             </div>
         </div>
         <Transition name="light-appear" appear>
@@ -64,7 +65,7 @@ export default {
         display: flex;
         background-color: #01002F;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex- 
     }
     .homeprice__block {
         max-width: 1690px;
@@ -174,12 +175,18 @@ export default {
         transition: all 0.35s ease;
         // min-width: none;
         // flex-shrink: 0;
+        z-index: 200;
     }
     .homeprice__block--right__img:hover {
         transform: scale(1.04);
         filter: drop-shadow(0 0 2rem #94CFD0);
         cursor: pointer;
         transition: all 0.35s ease;
+    }
+    .homeprice__block--right__img--second {
+        position:absolute;
+        right: 0px;
+        z-index: 250;
     }
 
     .homeprice__light {
