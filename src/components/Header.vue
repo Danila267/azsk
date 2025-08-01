@@ -11,7 +11,7 @@
             <div class="header__upper-part--second">
                 <p class="header__upper-part--second__column" @click="redirect('Categories')">МАГАЗИН</p>
                 <p class="header__upper-part--second__column">О НАС</p>
-                <p class="header__upper-part--second__column">КОНТАКТЫ</p>
+                <p class="header__upper-part--second__column" @click="redirect('Contacts')">КОНТАКТЫ</p>
                 <p class="header__upper-part--second__column">БЛОГ</p>
                 <p class="header__upper-part--second__column">КОРЗИНА</p>
             </div>
