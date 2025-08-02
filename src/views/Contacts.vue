@@ -4,16 +4,32 @@
             <div class="contacts__block__title">Контакты</div>
             <div class="contacts__block__list">
                 <div class="contacts__block__list__item">
-                    FJHF
+                    <img src="../assets/contacts/phone2.png" class="contacts__block__list__item__picture">
+                    <div class="contacts__block__list__item__text">
+                        <p class="contacts__block__list__item__container__title">Телефон</p>
+                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                    </div>
                 </div>
                 <div class="contacts__block__list__item">
-                    POKIK
+                    <img src="../assets/contacts/email2.png" class="contacts__block__list__item__picture">
+                    <div class="contacts__block__list__item__text">
+                        <p class="contacts__block__list__item__container__title">Эл. Почта</p>
+                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                    </div>
                 </div>
                 <div class="contacts__block__list__item">
-                    aslkamdm
+                    <img src="../assets/contacts/whatwhite3.png" class="contacts__block__list__item__picture">
+                    <div class="contacts__block__list__item__text">
+                        <p class="contacts__block__list__item__container__title">Whatsapp</p>
+                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                    </div>
                 </div>
                 <div class="contacts__block__list__item">
-                    qwpoqwij
+                    <img src="../assets/contacts/location3.png" class="contacts__block__list__item__picture">
+                    <div class="contacts__block__list__item__text">
+                        <p class="contacts__block__list__item__container__title">Наш адрес</p>
+                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,14 +57,15 @@ export default {
     z-index: 300;
 }
 .contacts__block {
-    max-width: 1400px;
+    max-width: 1600px;
     height: auto;
     // background-color: #afc985;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 300;
-    background-color: aquamarine;
+    // background-color: aquamarine;
+    background-color: #01002F;
     align-items: center;
 }
 .contacts__block__title {
@@ -74,19 +91,60 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    background-color: red;
+    // background-color: red;
+    background-color: #ffffff;
     margin-top: 2em;
     gap: 5px;
 }
 .contacts__block__list__item {
-  flex-basis: 500px;
+  flex-basis: 574px;
   height: 154px;
-  background-color: #d2d3e6;
+//   background-color: #d2d3e6;
+  background-color: #010027;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   transition: all 0.3s ease;
   overflow: hidden;
   flex-grow: 1;
+}
+.contacts__block__list__item__picture {
+    width: 154px;
+    object-fit: contain;
+}
+.contacts__block__list__item__text {
+    width: 100%;
+    height: 100%;
+    // background-color: green;
+    background-color: #010027;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.contacts__block__list__item__container__title {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 2.8em;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding-left: 0.35em;
+    padding-top: 0.35em;
+    box-sizing: border-box;
+}
+.contacts__block__list__item__container__text {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    padding-left: 1em;
+    padding-top: 0.35em;
+    box-sizing: border-box;
 }
 </style>
