@@ -4,32 +4,50 @@
             <div class="contacts__block__title">Контакты</div>
             <div class="contacts__block__list">
                 <div class="contacts__block__list__item">
+                    <Transition name="item-left-appear" appear>
+                    <!-- <template> -->
                     <img src="../assets/contacts/phone2.png" class="contacts__block__list__item__picture">
+                    </Transition>
+                    <Transition name="item-left-appear" appear>
                     <div class="contacts__block__list__item__text">
                         <p class="contacts__block__list__item__container__title">Телефон</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
+                    </Transition>
+                    <!-- </template> -->
                 </div>
                 <div class="contacts__block__list__item">
+                    <Transition name="item-right-appear" appear>
                     <img src="../assets/contacts/email2.png" class="contacts__block__list__item__picture">
+                    </Transition>
+                    <Transition name="item-right-appear" appear>
                     <div class="contacts__block__list__item__text">
                         <p class="contacts__block__list__item__container__title">Эл. Почта</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
+                    </Transition>
                 </div>
                 <div class="contacts__block__list__item">
+                    <Transition name="item-left-appear" appear>
                     <img src="../assets/contacts/whatwhite3.png" class="contacts__block__list__item__picture">
+                    </Transition>
+                    <Transition name="item-left-appear" appear>
                     <div class="contacts__block__list__item__text">
                         <p class="contacts__block__list__item__container__title">Whatsapp</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
+                    </Transition>
                 </div>
                 <div class="contacts__block__list__item">
+                    <Transition name="item-right-appear" appear>
                     <img src="../assets/contacts/location3.png" class="contacts__block__list__item__picture">
+                    </Transition>
+                    <Transition name="item-right-appear" appear>
                     <div class="contacts__block__list__item__text">
                         <p class="contacts__block__list__item__container__title">Наш адрес</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
+                    </Transition>
                 </div>
             </div>
         </div>
@@ -43,6 +61,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .item-left-appear-enter-active {
+        animation: left-appear-in 1.25s ease;
+    }
+    .item-right-appear-enter-active {
+        animation: right-appear-in 1.25s ease;
+    }
+
+
 .contacts {
     width: 100%;
     height: 80vh;
@@ -105,12 +131,14 @@ export default {
   flex-direction: row;
   position: relative;
   transition: all 0.3s ease;
-  overflow: hidden;
+//   overflow: hidden;
   flex-grow: 1;
+  transition: all 0.35s ease;
 }
 .contacts__block__list__item__picture {
     width: 154px;
     object-fit: contain;
+    overflow: visible;
 }
 .contacts__block__list__item__text {
     width: 100%;
@@ -147,4 +175,22 @@ export default {
     padding-top: 0.35em;
     box-sizing: border-box;
 }
+
+
+    @keyframes left-appear-in {
+    0% {
+        transform: translateX(-700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes right-appear-in {
+    0% {
+        transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
 </style>
