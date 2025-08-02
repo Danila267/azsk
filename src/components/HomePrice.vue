@@ -65,7 +65,7 @@ export default {
         display: flex;
         background-color: #01002F;
         justify-content: center;
-        align-items: flex- 
+        align-items: flex-start;
     }
     .homeprice__block {
         max-width: 1690px;

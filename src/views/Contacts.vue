@@ -11,7 +11,7 @@
                     <Transition name="item-left-appear" appear>
                     <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Телефон</p>
-                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                        <a href="tel:+77052330968" class="contacts__block__list__item__container__text">+7 705 233 09 68</a>
                     </div>
                     </Transition>
                     <!-- </template> -->
@@ -23,7 +23,7 @@
                     <Transition name="item-right-appear" appear>
                     <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Эл. Почта</p>
-                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                        <a href="mailto:gasmarket24@mail.ru" class="contacts__block__list__item__container__text">gasmarket24@mail.ru</a>
                     </div>
                     </Transition>
                 </div>
@@ -34,7 +34,7 @@
                     <Transition name="item-left-appear" appear>
                     <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Whatsapp</p>
-                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                        <a href="https://wa.me/77052330968?text=" class="contacts__block__list__item__container__text">Перейти в чат</a>
                     </div>
                     </Transition>
                 </div>
@@ -45,21 +45,21 @@
                     <Transition name="item-right-appear" appear>
                     <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Наш адрес</p>
-                        <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                        <p class="contacts__block__list__item__container__text" id="address">Ул. Д Курманбекова 3, г. Шымкент</p>
                     </div>
                     </Transition>
                 </div>
                 <div class="contacts__block__list__item">
-                    <Transition name="item-left-appear" appear>
+                    <Transition name="item-down-appear" appear>
                     <!-- <template> -->
                     <img src="../assets/contacts/additional5.png" class="contacts__block__list__item__picture">
                     </Transition>
-                    <Transition name="item-left-appear" appear>
+                    <Transition name="item-down-appear" appear>
                     <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Доп. Связь</p>
                         <div class="contacts__block__list__item__container--row">
-                            <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
-                            <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                            <a href="tel:+77772453676" class="contacts__block__list__item__container__text">+7 777 245 36 76</a>
+                            <a href="tel:+77056879330" class="contacts__block__list__item__container__text">+7 705 687 93 30</a>
                         </div>
                     </div>
                     </Transition>
@@ -73,6 +73,15 @@
 <script>
 export default {
     name: 'Contacts',
+    mounted() {
+        this.scrollToTop();
+        console.log("Scrolled")
+    },
+    methods: {
+        scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+  },
 }
 </script>
 
@@ -82,6 +91,9 @@ export default {
     }
     .item-right-appear-enter-active {
         animation: right-appear-in 1.25s ease;
+    }
+    .item-down-appear-enter-active {
+        animation: down-appear-in 1.25s ease;
     }
 
 
@@ -154,7 +166,9 @@ export default {
 .contacts__block__list__item__picture {
     width: 154px;
     object-fit: contain;
-    overflow: visible;
+    // overflow: visible;
+    user-select: none;
+    overflow: hidden;
 }
 .contacts__block__list__item__container {
     width: 100%;
@@ -164,6 +178,7 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .contacts__block__list__item__container--row {
     width: 100%;
@@ -186,6 +201,7 @@ export default {
     padding-left: 0.35em;
     padding-top: 0.35em;
     box-sizing: border-box;
+    user-select: none;
 }
 .contacts__block__list__item__container__text {
     width: auto;
@@ -196,9 +212,21 @@ export default {
     font-size: 1.5em;
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
+    text-decoration: none;
     padding-left: 1em;
     padding-top: 0.35em;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.contacts__block__list__item__container__text:hover {
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#address:hover {
+    color: #ddd;
+    cursor: text;
+    transition: all 0.3s ease;
 }
 
 
@@ -213,6 +241,14 @@ export default {
     @keyframes right-appear-in {
     0% {
         transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes down-appear-in {
+    0% {
+        transform: translateY(700px);
     }
     100% {
         transform: translateX(0px);

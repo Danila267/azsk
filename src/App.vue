@@ -18,6 +18,11 @@ export default {
   padding: 0;
   width: 100%;
 }
+section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
 
 
 
