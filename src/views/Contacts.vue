@@ -9,7 +9,7 @@
                     <img src="../assets/contacts/phone2.png" class="contacts__block__list__item__picture">
                     </Transition>
                     <Transition name="item-left-appear" appear>
-                    <div class="contacts__block__list__item__text">
+                    <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Телефон</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
@@ -21,7 +21,7 @@
                     <img src="../assets/contacts/email2.png" class="contacts__block__list__item__picture">
                     </Transition>
                     <Transition name="item-right-appear" appear>
-                    <div class="contacts__block__list__item__text">
+                    <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Эл. Почта</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
@@ -32,7 +32,7 @@
                     <img src="../assets/contacts/whatwhite3.png" class="contacts__block__list__item__picture">
                     </Transition>
                     <Transition name="item-left-appear" appear>
-                    <div class="contacts__block__list__item__text">
+                    <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Whatsapp</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
@@ -43,11 +43,27 @@
                     <img src="../assets/contacts/location3.png" class="contacts__block__list__item__picture">
                     </Transition>
                     <Transition name="item-right-appear" appear>
-                    <div class="contacts__block__list__item__text">
+                    <div class="contacts__block__list__item__container">
                         <p class="contacts__block__list__item__container__title">Наш адрес</p>
                         <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
                     </div>
                     </Transition>
+                </div>
+                <div class="contacts__block__list__item">
+                    <Transition name="item-left-appear" appear>
+                    <!-- <template> -->
+                    <img src="../assets/contacts/additional5.png" class="contacts__block__list__item__picture">
+                    </Transition>
+                    <Transition name="item-left-appear" appear>
+                    <div class="contacts__block__list__item__container">
+                        <p class="contacts__block__list__item__container__title">Доп. Связь</p>
+                        <div class="contacts__block__list__item__container--row">
+                            <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                            <p class="contacts__block__list__item__container__text">+7-123-456-78-90</p>
+                        </div>
+                    </div>
+                    </Transition>
+                    <!-- </template> -->
                 </div>
             </div>
         </div>
@@ -140,7 +156,7 @@ export default {
     object-fit: contain;
     overflow: visible;
 }
-.contacts__block__list__item__text {
+.contacts__block__list__item__container {
     width: 100%;
     height: 100%;
     // background-color: green;
@@ -148,6 +164,15 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
+}
+.contacts__block__list__item__container--row {
+    width: 100%;
+    height: 100%;
+    // background-color: green;
+    background-color: #010027;
+    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 .contacts__block__list__item__container__title {
     width: auto;
