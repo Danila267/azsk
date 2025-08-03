@@ -11,9 +11,11 @@
                 <div class="logmain__block__sortblock__sorting">
                     <img src="../assets/catalog/sorting3.png" alt="" class="logmain__block__sortblock__sorting__img">
                     <p class="logmain__block__sortblock__sorting__text">По популярности</p>
+                    <img src="../assets/catalog/arrowgray.png" alt="" class="logmain__block__sortblock__grayarrow">
                 </div>
                 <div class="logmain__block__sortblock__catcheck">
-
+                    <p class="logmain__block__sortblock__catcheck__text">Категория</p>
+                    <img src="../assets/catalog/arrowgray.png" alt="" class="logmain__block__sortblock__grayarrow">
                 </div>
             </div>
         </div>
@@ -94,7 +96,7 @@ export default {
     border: 3px solid #ffffff;
     box-sizing: border-box;
     min-width: 0;
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
 }
 .logmain__block__sortblock__filter__img {
     flex-basis: 50px;
@@ -114,7 +116,7 @@ export default {
     font-family: 'Outfit', sans-serif;
     padding: 0;
     padding-left: 0.35em;
-    padding-right: 60px;
+    // padding-right: 60px;
     align-self: center;
     box-sizing: border-box;
     min-width: 0px;
@@ -148,15 +150,48 @@ export default {
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
     padding: 0;
-    padding-left: 0.35em;
+    // padding-left: 0.35em;
     align-self: center;
     box-sizing: border-box;
+    min-width: 0px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .logmain__block__sortblock__catcheck {
     flex-basis: 185px;
     height: 50px;
     position: relative;
     display: flex;
-    background-color: green;
+    // background-color: green;
+    background-color: #010027;
+    border-radius: 20px;
+    justify-content: space-evenly;
+}
+.logmain__block__sortblock__catcheck__text {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    padding-left: 0.35em;
+    align-self: center;
+    box-sizing: border-box;
+}
+.logmain__block__sortblock__grayarrow {
+    width: 28px;
+    height: auto;
+    position: relative;
+    display: flex;
+    object-fit: contain;
+    top: 3%;
+    padding-left: 5px;
+    padding-right: 10px;
+    // margin-left: auto;
+    // margin-right: 10px;
 }
 </style>
