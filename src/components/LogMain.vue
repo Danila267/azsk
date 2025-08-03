@@ -5,7 +5,8 @@
             <p class="logmain__block__circums">43 совпадений найдено</p>
             <div class="logmain__block__sortblock">
                 <div class="logmain__block__sortblock__filter">
-
+                    <img src="../assets/catalog/filter5.png" alt="" class="logmain__block__sortblock__filter__img">
+                    <p class="logmain__block__sortblock__filter__text">Все фильтры</p>
                 </div>
                 <div class="logmain__block__sortblock__sorting">
 
@@ -87,7 +88,30 @@ export default {
     height: 50px;
     position: relative;
     display: flex;
-    background-color: red;
+    background-color: #010027;
+    border-radius: 20px;
+    border: 3px solid #ffffff;
+}
+.logmain__block__sortblock__filter__img {
+    width: 50px;
+    height: auto;
+    position: relative;
+    display: flex;
+    object-fit: contain;
+}
+.logmain__block__sortblock__filter__text {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    padding-left: 0.35em;
+    align-self: center;
+    box-sizing: border-box;
 }
 .logmain__block__sortblock__sorting {
     flex-basis: 309px;
