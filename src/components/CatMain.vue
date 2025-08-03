@@ -25,7 +25,7 @@ export default {
     background-color: #01002F;
     // background-color: #0400d4;
     justify-content: center;
-    align-items: flex- 
+    align-items: flex-start;
 }
 .catmain__block {
     max-width: 1690px;
