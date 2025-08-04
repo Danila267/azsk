@@ -1,8 +1,13 @@
 <template>
     <div class="logmain">
         <div class="logmain__block">
+            <Transition name="title-appear" appear>
             <p class="logmain__block__title">Технопроект</p>
+            </Transition>
+            <Transition name="circums-appear" appear>
             <p class="logmain__block__circums">43 совпадений найдено</p>
+            </Transition>
+            <Transition name="sortblock-appear" appear>
             <div class="logmain__block__sortblock">
                 <div class="logmain__block__sortblock__filter">
                     <img src="../assets/catalog/filter5.png" alt="" class="logmain__block__sortblock__filter__img">
@@ -18,6 +23,7 @@
                     <img src="../assets/catalog/arrowgray.png" alt="" class="logmain__block__sortblock__grayarrow">
                 </div>
             </div>
+            </Transition>
             <LogList />
         </div>
     </div>
@@ -34,6 +40,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .title-appear-enter-active {
+        animation: up-appear-in 1.25s ease;
+    }
+    .circums-appear-enter-active {
+        animation: up-appear-in 1s ease;
+    }
+    .sortblock-appear-enter-active {
+        animation: left-appear-in 0.9s ease;
+    }
+
+
 .logmain {
     width: 100%;
     height: auto;
@@ -47,7 +64,8 @@ export default {
 .logmain__block {
     max-width: 1690px;
     height: auto;
-    background-color: #afc985;
+    // background-color: #afc985;
+    background-color: #01002F;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -87,8 +105,11 @@ export default {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    background-color: aqua;
+    // background-color: aqua;
+    background-color: #01002F;
     justify-content:space-between;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 .logmain__block__sortblock__filter {
     flex-basis: 250px;
@@ -101,6 +122,12 @@ export default {
     box-sizing: border-box;
     min-width: 0;
     // flex-wrap: nowrap;
+    transition: all 0.3s ease;
+}
+.logmain__block__sortblock__filter:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all 0.3s ease;
 }
 .logmain__block__sortblock__filter__img {
     flex-basis: 50px;
@@ -108,6 +135,8 @@ export default {
     position: relative;
     display: flex;
     object-fit: contain;
+    margin-left: 5px;
+    user-select: none;
 }
 .logmain__block__sortblock__filter__text {
     width: auto;
@@ -119,7 +148,7 @@ export default {
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
     padding: 0;
-    padding-left: 0.35em;
+    padding-left: 0.2em;
     // padding-right: 60px;
     align-self: center;
     box-sizing: border-box;
@@ -127,6 +156,7 @@ export default {
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
+    user-select: none;
 }
 .logmain__block__sortblock__sorting {
     flex-basis: 309px;
@@ -136,6 +166,12 @@ export default {
     // background-color: blueviolet;
     background-color: #010027;
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.logmain__block__sortblock__sorting:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all 0.3s ease;
 }
 .logmain__block__sortblock__sorting__img {
     width: 50px;
@@ -143,6 +179,13 @@ export default {
     position: relative;
     display: flex;
     object-fit: contain;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+.logmain__block__sortblock__sorting:hover .logmain__block__sortblock__grayarrow {
+    transform: rotateZ(180deg);
+    transition: all 0.3s ease;
+
 }
 .logmain__block__sortblock__sorting__text {
     width: auto;
@@ -161,6 +204,7 @@ export default {
     flex-wrap: nowrap;
     overflow: hidden;
     white-space: nowrap;
+    user-select: none;
 }
 .logmain__block__sortblock__catcheck {
     flex-basis: 185px;
@@ -171,6 +215,16 @@ export default {
     background-color: #010027;
     border-radius: 20px;
     justify-content: space-evenly;
+    transition: all 0.3s ease;
+}
+.logmain__block__sortblock__catcheck:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all 0.3s ease;
+}
+.logmain__block__sortblock__catcheck:hover .logmain__block__sortblock__grayarrow {
+    transform: rotateZ(180deg);
+    transition: all 0.3s ease;
 }
 .logmain__block__sortblock__catcheck__text {
     width: auto;
@@ -185,6 +239,7 @@ export default {
     padding-left: 0.35em;
     align-self: center;
     box-sizing: border-box;
+    user-select: none;
 }
 .logmain__block__sortblock__grayarrow {
     width: 28px;
@@ -195,7 +250,34 @@ export default {
     top: 3%;
     padding-left: 5px;
     padding-right: 10px;
+    user-select: none;
     // margin-left: auto;
     // margin-right: 10px;
+    transition: all 0.3s ease;
 }
+
+    @keyframes left-appear-in {
+    0% {
+        transform: translateX(-700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes right-appear-in {
+    0% {
+        transform: translateX(800px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
+    @keyframes up-appear-in {
+    0% {
+        transform: translateY(-700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
 </style>
