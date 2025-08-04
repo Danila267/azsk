@@ -18,13 +18,17 @@
                     <img src="../assets/catalog/arrowgray.png" alt="" class="logmain__block__sortblock__grayarrow">
                 </div>
             </div>
+            <LogList />
         </div>
     </div>
 </template>
 
 <script>
+import LogList from './LogList.vue';
+
 export default {
-    name: 'LogMain'
+    name: 'LogMain',
+    components: { LogList, }
 }
 
 </script>
