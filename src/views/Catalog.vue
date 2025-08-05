@@ -1,8 +1,8 @@
 <template>
     <div class="catalog">
         <LogMain />
-        <Filter />
     </div>
+    <Filter />
 </template>
 
 <script>
