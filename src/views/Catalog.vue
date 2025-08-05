@@ -1,15 +1,17 @@
 <template>
     <div class="catalog">
         <LogMain />
+        <Filter />
     </div>
 </template>
 
 <script>
 import LogMain from '@/components/LogMain.vue';
+import Filter from '@/components/modals/Filter.vue';
 
 export default {
     name: 'Catalog',
-    components: { LogMain, }
+    components: { LogMain, Filter }
 }
 
 </script>

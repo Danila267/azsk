@@ -33,6 +33,13 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.logitem:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: #dfddd5;
+    transition: all 0.3s ease;
 }
 .logitem__imageblock {
     width: 248px;
@@ -124,6 +131,13 @@ export default {
     bottom: 10px;
     border-radius: 20px;
     border: 3px solid #ffffff;
+    transition: all 0.3s ease;
+}
+.logitem__bottomblock__button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
 }
 .logitem__bottomblock__button__cart-img {
     width: 30px;
