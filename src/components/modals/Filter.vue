@@ -1,17 +1,40 @@
 <template>
     <div class="filter">
         <div class="filter__modal">
+
+
             <div class="filter__modal__title-block">
                 <p class="filter__modal__title-block__title">Фильтры</p>
                 <img src="../../assets/catalog/close2.png" alt="" class="filter__modal__title-block__close-img">
             </div>
+
+
             <div class="filter__modal__price-block">
                 <div class="filter__modal__price-block__upper-list">
                     <p class="filter__modal__price-block__upper-list__title">Цена, ₸</p>
                     <img src="../../assets/catalog/arrowgray.png" alt="" class="filter__modal__price-block__upper-list__close-img">
                 </div>
                 <div class="filter__modal__price-block__range-list">
+                    <div class="filter__modal__price-block__range-list__range-block">
+                        <p class="filter__modal__price-block__range-list__range-block__label">От</p>
+                        <input type="text" class="filter__modal__price-block__range-list__range-block__input">
+                    </div>
+                    <div class="filter__modal__price-block__range-list__range-block">
+                        <p class="filter__modal__price-block__range-list__range-block__label">До</p>
+                        <input type="text" class="filter__modal__price-block__range-list__range-block__input">
+                    </div>
+                </div>
+            </div>
 
+            <div class="filter__modal__category-block">
+                <div class="filter__modal__category-block__upper-list">
+                    <p class="filter__modal__category-block__upper-list__title">Категория</p>
+                </div>
+                <div class="filter__modal__category-block__check-list">
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Оборудование</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,6 +111,7 @@ export default {
     height: 180px;
     position: relative;
     display: flex;
+    flex-direction: column;
     border-radius: 30px;
     background-color: purple;
     align-items: flex-start;
@@ -131,5 +155,165 @@ export default {
     position: relative;
     display: flex;
     flex-direction: row;
+}
+.filter__modal__price-block__range-list__range-block {
+    width: 50%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.filter__modal__price-block__range-list__range-block__label {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    margin-left: 54px;
+    margin-top: 8px;
+    // padding-bottom: 0.1em;
+    box-sizing: border-box;
+}
+.filter__modal__price-block__range-list__range-block__input {
+    width: 166px;
+    height: 44px;
+    background-color: #ffffff;
+    margin-left: 40px;
+    border-radius: 30px;
+    border: 0px solid #ffffff;
+    outline: none;
+    font-size: 1.25em;
+    font-weight: 500;
+    color: #000000;
+    font-family: 'Outfit', sans-serif;
+    padding-left: 22px;
+    padding-right: 22px;
+    box-sizing: border-box;
+    transition: filter 0.3s ease;
+}
+.filter__modal__price-block__range-list__range-block__input:hover {
+    cursor: text;
+    filter: brightness(90%);
+    transition: all 0.2s ease;
+}
+.filter__modal__price-block__range-list__range-block__input:focus {
+    border: 3px solid #0306F0;
+    box-sizing: border-box;
+    transition: filter 0.3s ease;
+}
+.filter__modal__category-block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    align-items: flex-start;
+    background-color: pink;
+}
+.filter__modal__category-block__upper-list {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filter__modal__category-block__upper-list__title {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    margin-left: 28px;
+    margin-top: 24px;
+    // padding-bottom: 0.1em;
+    box-sizing: border-box;
+}
+.filter__modal__category-block__check-list {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 14px;
+    margin-left: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+}
+.filter__modal__category-block__check-list__check-item {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-evenly;
+}
+// .filter__modal__category-block__check-list__check-item__check {
+//     width: 30px;
+//     height: 30px;
+//     background-color: #ffffff;
+//     border-radius: 30px;
+// }
+.filter__modal__category-block__check-list__check-item__check {
+    appearance: none; /* remove default OS checkbox style */
+    -webkit-appearance: none; /* for Safari */
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 12px; /* perfect circle */
+    border: 2px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.1s ease-out;
+}
+
+/* Optional: when checked, show a custom mark */
+.filter__modal__category-block__check-list__check-item__check:checked {
+    background-color: #0306F0;
+    border-color: #0306F0;
+    transition: all 0.1s ease-out;
+}
+
+/* Optional: add a tick mark */
+.filter__modal__category-block__check-list__check-item__check:checked::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 11px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg) scale(1.2);
+    transition: all 0.1s ease-out;
+}
+.filter__modal__category-block__check-list__check-item__label {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    // margin-left: 54px;
+    margin-top: 1px;
+    // padding-bottom: 0.1em;
+    box-sizing: border-box;
+    user-select: none;
 }
 </style>
