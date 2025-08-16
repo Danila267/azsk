@@ -29,14 +29,56 @@
             <div class="filter__modal__category-block">
                 <div class="filter__modal__category-block__upper-list">
                     <p class="filter__modal__category-block__upper-list__title">Категория</p>
+                    <img src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img"/>
                 </div>
                 <div class="filter__modal__category-block__check-list">
+                    
                     <div class="filter__modal__category-block__check-list__check-item">
                         <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
                         <p class="filter__modal__category-block__check-list__check-item__label">Оборудование</p>
                     </div>
+
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Запчасти</p>
+                    </div>
+
                 </div>
             </div>
+
+            <div class="filter__modal__category-block">
+                <div class="filter__modal__category-block__upper-list">
+                    <p class="filter__modal__category-block__upper-list__title">Производитель</p>
+                    <img src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img"/>
+                </div>
+                <div class="filter__modal__category-block__check-list">
+                    
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Шельф</p>
+                    </div>
+
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Топаз</p>
+                    </div>
+
+
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Технопроект</p>
+                    </div>
+
+
+                    <div class="filter__modal__category-block__check-list__check-item">
+                        <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
+                        <p class="filter__modal__category-block__check-list__check-item__label">Gilbarco</p>
+                    </div>
+
+                </div>
+            </div>
+            
+
         </div>
     </div>
 </template>
@@ -67,7 +109,9 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 59px;
-    background-color: blue;
+    // background-color: blue;
+    background-color: #010027;
+    overflow: auto;
 }
 .filter__modal__title-block {
     width: 100%;
@@ -77,7 +121,8 @@ export default {
     flex-direction: row;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    background-color: red;
+    // background-color: red;
+    background-color: #01002F;
     // justify-content: center;
     align-items: center;
     justify-content: space-between;
@@ -93,6 +138,8 @@ export default {
     font-family: 'Outfit', sans-serif;
     padding: 0;
     padding-left: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     // padding-bottom: 0.1em;
     box-sizing: border-box;
 }
@@ -113,7 +160,8 @@ export default {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    background-color: purple;
+    // background-color: purple;
+    background-color: #01002F;
     align-items: flex-start;
 }
 .filter__modal__price-block__upper-list {
@@ -183,6 +231,7 @@ export default {
     height: 44px;
     background-color: #ffffff;
     margin-left: 40px;
+    margin-bottom: 20px;
     border-radius: 30px;
     border: 0px solid #ffffff;
     outline: none;
@@ -213,7 +262,8 @@ export default {
     flex-direction: column;
     border-radius: 30px;
     align-items: flex-start;
-    background-color: pink;
+    // background-color: pink;
+    background-color: #01002F;
 }
 .filter__modal__category-block__upper-list {
     width: 100%;
@@ -238,6 +288,16 @@ export default {
     // padding-bottom: 0.1em;
     box-sizing: border-box;
 }
+.filter__modal__category-block__upper-list__close-img {
+    width: 35px;
+    height: auto;
+    position: relative;
+    display: flex;
+    object-fit: contain;
+    margin-right: 34px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
 .filter__modal__category-block__check-list {
     width: auto;
     height: auto;
@@ -258,7 +318,7 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 // .filter__modal__category-block__check-list__check-item__check {
 //     width: 30px;
@@ -269,14 +329,19 @@ export default {
 .filter__modal__category-block__check-list__check-item__check {
     appearance: none; /* remove default OS checkbox style */
     -webkit-appearance: none; /* for Safari */
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     background-color: #ffffff;
-    border-radius: 12px; /* perfect circle */
+    border-radius: 10px; /* perfect circle */
     border: 2px solid #ccc;
     cursor: pointer;
     display: inline-block;
     position: relative;
+    transition: all 0.1s ease-out;
+}
+.filter__modal__category-block__check-list__check-item__check:hover {
+    // background-color: #ddd;
+    filter: brightness(90%);
     transition: all 0.1s ease-out;
 }
 
@@ -291,13 +356,13 @@ export default {
 .filter__modal__category-block__check-list__check-item__check:checked::after {
     content: "";
     position: absolute;
-    top: 6px;
-    left: 11px;
+    top: 5px;
+    left: 9px;
     width: 6px;
     height: 12px;
     border: solid white;
     border-width: 0 4px 4px 0;
-    transform: rotate(45deg) scale(1.2);
+    transform: rotate(45deg) scale(1);
     transition: all 0.1s ease-out;
 }
 .filter__modal__category-block__check-list__check-item__label {
