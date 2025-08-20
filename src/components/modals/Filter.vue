@@ -1,5 +1,7 @@
 <template>
-    <div class="filter">
+    <div @click.self="closeFilter" class="filter">
+
+        <Transition name="filter-appear" appear>
         <div class="filter__modal">
 
 
@@ -80,16 +82,28 @@
             
 
         </div>
+        </Transition>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Filter'
+    name: 'Filter',
+    methods: {
+        closeFilter() {
+            this.$emit('close')
+        }
+    }
+
 }
 </script>
 
 <style lang="scss" scoped>
+
+    .filter-appear-enter-active {
+        animation: right-appear-in 0.5s ease;
+    }
+
 .filter {
     width: 100vw;
     height: 100vh;
@@ -381,4 +395,14 @@ export default {
     box-sizing: border-box;
     user-select: none;
 }
+
+
+    @keyframes right-appear-in {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    }
 </style>

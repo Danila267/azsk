@@ -9,7 +9,7 @@
             </Transition>
             <Transition name="sortblock-appear" appear>
             <div class="logmain__block__sortblock">
-                <div class="logmain__block__sortblock__filter">
+                <div @click="toggleFilter" class="logmain__block__sortblock__filter">
                     <img src="../assets/catalog/filter5.png" alt="" class="logmain__block__sortblock__filter__img">
                     <p class="logmain__block__sortblock__filter__text">Все фильтры</p>
                 </div>
@@ -34,7 +34,12 @@ import LogList from './LogList.vue';
 
 export default {
     name: 'LogMain',
-    components: { LogList, }
+    components: { LogList, },
+    methods: {
+        toggleFilter() {
+            this.$emit('filter')
+        }
+    }
 }
 
 </script>
