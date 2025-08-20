@@ -7,16 +7,16 @@
 
             <div class="filter__modal__title-block">
                 <p class="filter__modal__title-block__title">Фильтры</p>
-                <img src="../../assets/catalog/close2.png" alt="" class="filter__modal__title-block__close-img">
+                <img @click.self="closeFilter" src="../../assets/catalog/close2.png" alt="" class="filter__modal__title-block__close-img">
             </div>
 
 
             <div class="filter__modal__price-block">
                 <div class="filter__modal__price-block__upper-list">
                     <p class="filter__modal__price-block__upper-list__title">Цена, ₸</p>
-                    <img src="../../assets/catalog/arrowgray.png" alt="" class="filter__modal__price-block__upper-list__close-img">
+                    <img @click="switchPrice" src="../../assets/catalog/arrowgray.png" alt="" class="filter__modal__price-block__upper-list__close-img" :class="{ rotated: !togglePrice}">
                 </div>
-                <div class="filter__modal__price-block__range-list">
+                <div v-if="togglePrice" class="filter__modal__price-block__range-list">
                     <div class="filter__modal__price-block__range-list__range-block">
                         <p class="filter__modal__price-block__range-list__range-block__label">От</p>
                         <input type="text" class="filter__modal__price-block__range-list__range-block__input">
@@ -31,9 +31,9 @@
             <div class="filter__modal__category-block">
                 <div class="filter__modal__category-block__upper-list">
                     <p class="filter__modal__category-block__upper-list__title">Категория</p>
-                    <img src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img"/>
+                    <img @click="switchCategory" src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img" :class="{ rotated: !toggleCategory}"/>
                 </div>
-                <div class="filter__modal__category-block__check-list">
+                <div v-if="toggleCategory" class="filter__modal__category-block__check-list">
                     
                     <div class="filter__modal__category-block__check-list__check-item">
                         <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
@@ -51,9 +51,9 @@
             <div class="filter__modal__category-block">
                 <div class="filter__modal__category-block__upper-list">
                     <p class="filter__modal__category-block__upper-list__title">Производитель</p>
-                    <img src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img"/>
+                    <img @click="switchProducer" src="../../assets/catalog/arrowgray.png" class="filter__modal__category-block__upper-list__close-img" :class="{ rotated: !toggleProducer}"/>
                 </div>
-                <div class="filter__modal__category-block__check-list">
+                <div v-if="toggleProducer" class="filter__modal__category-block__check-list">
                     
                     <div class="filter__modal__category-block__check-list__check-item">
                         <input type="checkbox" name="" class="filter__modal__category-block__check-list__check-item__check">
@@ -89,9 +89,26 @@
 <script>
 export default {
     name: 'Filter',
+    data() {
+        return {
+            togglePrice: true,
+            toggleCategory: true,
+            toggleProducer: true,
+        }
+
+    },
     methods: {
         closeFilter() {
             this.$emit('close')
+        },
+        switchPrice() {
+            this.togglePrice = !this.togglePrice;
+        },
+        switchCategory() {
+            this.toggleCategory = !this.toggleCategory;
+        },
+        switchProducer() {
+            this.toggleProducer = !this.toggleProducer;
         }
     }
 
@@ -102,6 +119,11 @@ export default {
 
     .filter-appear-enter-active {
         animation: right-appear-in 0.5s ease;
+    }
+
+    .rotated {
+        transform: rotateZ(180deg);
+        transition: all 0.3s ease;
     }
 
 .filter {
@@ -122,7 +144,7 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 59px;
+    gap: 39px;
     // background-color: blue;
     background-color: #010027;
     overflow: auto;
@@ -166,10 +188,16 @@ export default {
     margin-right: 34px;
     margin-top: 10px;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.filter__modal__title-block__close-img:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .filter__modal__price-block {
     width: 100%;
-    height: 180px;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -177,6 +205,8 @@ export default {
     // background-color: purple;
     background-color: #01002F;
     align-items: flex-start;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 .filter__modal__price-block__upper-list {
     width: 100%;
@@ -185,6 +215,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .filter__modal__price-block__upper-list__title {
     width: auto;
@@ -208,8 +239,14 @@ export default {
     display: flex;
     object-fit: contain;
     margin-right: 34px;
-    margin-top: 10px;
+    margin-top: 28px;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.filter__modal__price-block__upper-list__close-img:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .filter__modal__price-block__range-list {
     width: auto;
@@ -245,7 +282,7 @@ export default {
     height: 44px;
     background-color: #ffffff;
     margin-left: 40px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     border-radius: 30px;
     border: 0px solid #ffffff;
     outline: none;
@@ -278,6 +315,8 @@ export default {
     align-items: flex-start;
     // background-color: pink;
     background-color: #01002F;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 .filter__modal__category-block__upper-list {
     width: 100%;
@@ -286,6 +325,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .filter__modal__category-block__upper-list__title {
     width: auto;
@@ -309,8 +349,14 @@ export default {
     display: flex;
     object-fit: contain;
     margin-right: 34px;
-    margin-top: 10px;
+    margin-top: 28px;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+.filter__modal__category-block__upper-list__close-img:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .filter__modal__category-block__check-list {
     width: auto;
@@ -322,7 +368,7 @@ export default {
     gap: 14px;
     margin-left: 40px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
     box-sizing: border-box;
 }
 .filter__modal__category-block__check-list__check-item {
