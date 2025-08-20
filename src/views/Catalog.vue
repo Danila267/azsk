@@ -18,7 +18,7 @@ export default {
     components: { LogMain, Filter },
     data() {
       return {
-        showModal: true,
+        showModal: false,
       }
     },
     methods: {

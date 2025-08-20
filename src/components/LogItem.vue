@@ -25,7 +25,10 @@ export default {
 
 <style lang="scss" scoped>
 .logitem {
-    width: 280px;
+    flex-basis: 280px;
+    max-width: 400px;
+    // min-width: 280px;
+    // width: 280px;
     height: 385px;
     background-color: #F0EDE5;
     position: relative;
@@ -33,6 +36,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     border-radius: 20px;
+    flex-grow: 0.5;
     transition: all 0.3s ease;
 }
 .logitem:hover {
@@ -42,7 +46,8 @@ export default {
     transition: all 0.3s ease;
 }
 .logitem__imageblock {
-    width: 248px;
+    // width: 248px;
+    width: 88%;
     height: 215px;
     position: relative;
     display: flex;
@@ -50,6 +55,10 @@ export default {
     margin-left: 15px;
     background-image: linear-gradient(to left, rgba($color: #8B0100, $alpha: 0.15) 12%,rgba($color: #400015, $alpha: 0.6) 67%, #010027);
     border-radius: 20px;
+}
+.logitem__imageblock__img {
+    // flex-basis: 215px;
+    object-fit: contain;
 }
 .logitem__title {
     width: auto;
@@ -80,8 +89,9 @@ export default {
     box-sizing: border-box;
 }
 .logitem__description {
-    width: auto;
-    height: auto;
+    width: 88%;
+    min-width: none;
+    height: 40px;
     position: relative;
     display: flex;
     color: #312F2C;
@@ -92,6 +102,9 @@ export default {
     margin-left: 15px;
     // margin-top: 0px;
     box-sizing: border-box;
+        // flex-wrap: nowrap;
+    overflow: hidden;
+    // white-space: nowrap;
 }
 .logitem__bottomblock {
     width: 88%;
@@ -117,20 +130,22 @@ export default {
     // margin-left: 15px;
     align-self: center;
     padding-bottom: 10px;
-    padding-left: 5px;
+    // padding-left: 5px;
     box-sizing: border-box;
 }
 .logitem__bottomblock__button {
-    width: 142px;
+    // width: 142px;
+    flex-basis: 142px;
     height: 40px;
     position: relative;
     display: flex;
     flex-direction: row;
     background-color: #030069;
     margin-left: auto;
-    bottom: 10px;
+    // bottom: 10px;
     border-radius: 20px;
     border: 3px solid #ffffff;
+    // flex-grow: 0.3;
     transition: all 0.3s ease;
 }
 .logitem__bottomblock__button:hover {

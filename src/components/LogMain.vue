@@ -261,6 +261,34 @@ export default {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 880px) { // adjust breakpoint as needed
+  .logmain__block__sortblock__sorting,
+  .logmain__block__sortblock__catcheck {
+    display: none;  // hide on smaller screens
+  }
+
+  .logmain__block__sortblock {
+    max-width: none;  // let it shrink properly
+    justify-content: flex-start; // align filter button to the left
+  }
+
+  .logmain__block__sortblock__filter {
+    flex: 1; // make filter button take available width if you want
+    max-width: 270px; // or set a cap so it doesn’t get too big
+    left: 30px;
+  }
+}
+
+@media (max-width: 580px) {
+    .logmain__block__title {
+        font-size: 3.5em;
+    }
+    .logmain__block__circums {
+        font-size: 1em;
+    }
+}
+
+
     @keyframes left-appear-in {
     0% {
         transform: translateX(-700px);
