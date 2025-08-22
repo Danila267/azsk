@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Categories from '@/views/Categories.vue'
 import Contacts from '@/views/Contacts.vue'
 import Catalog from '@/views/Catalog.vue'
+import SinglePage from '@/views/SinglePage.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     name: 'Catalog',
     component: Catalog
   },
+  {
+    path: '/item',
+    name: 'SinglePage',
+    component: SinglePage
+  }
 ]
 
 const router = createRouter({
