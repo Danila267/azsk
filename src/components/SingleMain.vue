@@ -8,7 +8,7 @@
                 <div class="singlemain__block__info__status">
                     <p class="singlemain__block__info__status__text">В наличии</p>
                 </div>
-                <p class="singlemain__block__info__title">BENZA 14-220-25 wefouiwahefiuowhefiuwhef</p>
+                <p class="singlemain__block__info__title">BENZA 14-220-25 </p>
                 <div class="singlemain__block__info__line--gray"></div>
                 <p class="singlemain__block__info__price--label">Цена</p>
                 <p class="singlemain__block__info__price--content">₸ 2 999 900</p>
@@ -55,6 +55,7 @@ export default {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    border-radius: 32px;
     z-index: 300;
     flex-shrink: 8;
     flex-grow: 0;
@@ -63,6 +64,7 @@ export default {
 .singlemain__block__imageblock {
         // width: 248px;
     flex-basis: 750px;
+    max-width: 750px;
     // height: 607px;;
     max-height: 607px;;
     min-height: 440px;
@@ -73,12 +75,15 @@ export default {
     margin-bottom: 18px;
     background-image: linear-gradient(to left, rgba($color: #8B0100, $alpha: 0.15) 12%,rgba($color: #400015, $alpha: 0.6) 67%, #010027);
     border-radius: 20px;
+    flex-grow: 1;
 }
 .singlemain__block__imageblock__img {
     object-fit: contain;
 }
 .singlemain__block__info {
-    flex-basis: 700px;
+    // flex-basis: 700px;
+    flex-basis: 400px;
+    max-width: 700px;
     // min-width: 650px;
     height: 607px;
     position: relative;
@@ -87,6 +92,7 @@ export default {
     // background-color: pink;
     box-sizing: border-box;
     align-items: flex-start;
+    flex-grow: 1;
 }
 .singlemain__block__info__status {
     width: 208px;
@@ -130,7 +136,7 @@ export default {
     box-sizing: border-box;
 }
 .singlemain__block__info__line--gray {
-    width: 700px;
+    width: 100%; //700px
     height: 6px;
     position: relative;
     display: flex;
