@@ -120,6 +120,7 @@ export default {
     align-self: center;
     // padding-bottom: 10px;
     // padding-left: 5px;
+    user-select: none;
     box-sizing: border-box;
 }
 .singlemain__block__info__title {
@@ -239,6 +240,12 @@ export default {
     // margin-right: auto;
     // align-self: flex-end;
     transition: all 0.3s ease;
+}
+.singlemain__block__info__button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
 }
 .singlemain__block__info__button__cart-img {
     width: 35px;

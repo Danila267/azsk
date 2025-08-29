@@ -2,15 +2,15 @@
     <div class="options">
         <div class="options__button-list">
 
-            <div class="options__button-list__button">
+            <div class="options__button-list__button" :class="{ active: status === 'options'}">
                 <div class="options__button-list__button__text">Характеристики</div>
             </div>
 
-            <div class="options__button-list__button">
+            <div class="options__button-list__button" :class="{ active: status === 'spares'}">
                 <div class="options__button-list__button__text">Запчасти</div>
             </div>
 
-            <div class="options__button-list__button">
+            <div class="options__button-list__button" :class="{ active: status === 'questions'}">
                 <div class="options__button-list__button__text">Вопросы</div>
             </div>
 
@@ -28,12 +28,18 @@ import OptionProps from './OptionProps.vue';
 
 export default {
     name: 'SingleOptions',
-    components: { OptionProps, }
+    components: { OptionProps, },
+    data() {
+        return {
+            status: 'options'
+        }
+    }
 }
 
 </script>
 
 <style lang="scss" scoped>
+
 .options {
     width: 100%;
     height: auto;
@@ -41,7 +47,8 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
-      background-color: blue;
+    // background-color: blue;d
+    background-color: #01002F;
     z-index: 300;
     align-items: center;
 }
@@ -52,10 +59,10 @@ export default {
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
-    background-color: aqua;
-    // background-color: #01002F;
+    // background-color: aqua;
+    background-color: #01002F;
     justify-content: flex-start;
-    margin-top: 10px;
+    margin-top: 24px;
     margin-left: 15px;
     gap: 10px;
 }
@@ -64,12 +71,21 @@ export default {
     height: 72px;
     position: relative;
     display: flex;
-    background-color: violet;
-    border: 3px solid #ffffff;
+    // background-color: violet;
+    background-color: #030069;
+    border: 4px solid #838383;
+    border-radius: 14px;
     justify-content: center;
     padding-left: 8px;
     padding-right: 8px;
+    user-select: none;
     box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+.options__button-list__button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all 0.2s ease;
 }
 .options__button-list__button__text {
     width: auto;
@@ -100,5 +116,12 @@ export default {
     border-radius: 5px;
 }
 
-
+.active {
+    border: 4px solid #ffffff;
+}
+.active:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+    transition: all 0.2s ease;
+}
 </style>
