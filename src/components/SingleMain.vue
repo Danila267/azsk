@@ -85,6 +85,7 @@ export default {
     flex-basis: 400px;
     max-width: 700px;
     // min-width: 650px;
+    // height: 520px;
     height: 607px;
     position: relative;
     display: flex;
@@ -123,7 +124,7 @@ export default {
 }
 .singlemain__block__info__title {
     width: auto;
-    height: 160px;
+    height: 128px;
     position: relative;
     display: flex;
     color: #312F2C;

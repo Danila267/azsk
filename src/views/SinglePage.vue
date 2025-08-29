@@ -1,15 +1,17 @@
 <template>
     <div class="singlepage">
         <SingleMain />
+        <SingleOptions />
     </div>
 </template>
 
 <script>
 import SingleMain from '@/components/SingleMain.vue';
+import SingleOptions from '@/components/SingleOptions.vue';
 
 export default {
     name: 'SinglePage',
-    components: { SingleMain, }
+    components: { SingleMain, SingleOptions }
 }
 </script>
 
