@@ -4,6 +4,7 @@ import Categories from '@/views/Categories.vue'
 import Contacts from '@/views/Contacts.vue'
 import Catalog from '@/views/Catalog.vue'
 import SinglePage from '@/views/SinglePage.vue'
+import Admin from '@/views/Admin.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/item',
     name: 'SinglePage',
     component: SinglePage
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin
   }
 ]
 

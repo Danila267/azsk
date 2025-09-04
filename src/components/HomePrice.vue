@@ -60,7 +60,7 @@ export default {
 
     .homeprice {
         width: 100%;
-        height: 80vh;
+        // height: 80vh;
         position: relative;
         display: flex;
         background-color: #01002F;
@@ -201,6 +201,87 @@ export default {
         border-radius: 50%;
         filter: blur(200px);
     }
+
+
+@media (max-width: 880px) { // adjust breakpoint as needed
+    .homeprice__block--right { // ***TODO***
+        // width: 648px;
+        // height: auto;
+        // // flex-shrink: 0;
+        // min-width: 648px;
+        // object-fit: contain;
+        // margin-right: 6em;
+        // animation: animate 5s ease-in-out infinite;
+        // animation-name: anima-homeprice-circle;
+        // animation-duration: 5s;
+        display: none;
+    }
+
+    .homeprice__block--left__title {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 5.4em;
+        font-weight: bold;
+        font-family: 'Outfit', sans-serif;
+        padding-left: 20px;
+        padding-top: 0.35em;
+        box-sizing: border-box;
+    }
+    .homeprice__block--left__text {
+        max-width: 620px;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 1.25em;
+        font-family: 'Outfit', sans-serif;
+        padding-left: 20px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
+    .homeprice__block--left__buttonline {
+        max-width: 470px;
+        height: auto;
+        position: relative;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 60px;
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+
+    .homeprice__block--left__buttonline__button--first {
+        max-width: 200px;
+        height:70px;
+        align-self: flex-start;
+        font-size: 1.5em;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        background-color: #8D8CDA;
+        border: 0px #8D8CDA solid;
+        border-radius: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .homeprice__block--left__buttonline__button--second { 
+        max-width: 250px;
+        height: 70px;
+        margin-left: auto;
+        font-size: 1.5em;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        border: 5px #76acad solid;
+        border-radius: 80px;
+        background-color: #01002F;
+        transition: all 0.3s ease;
+    }
+}
+    
 
     @keyframes left-appear-in {
     0% {

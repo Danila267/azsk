@@ -61,7 +61,7 @@ export default {
 
     .homemarket {
         width: 100%;
-        height: 80vh;
+        // height: 80vh;
         position: relative;
         display: flex;
         background-color: #01002F;
@@ -196,6 +196,40 @@ export default {
         transition: all 0.3s ease;
         cursor: pointer;
     }
+
+    @media (max-width: 880px) { // adjust breakpoint as needed
+        .homemarket__block--left {
+            display: none;
+        }
+
+        .homemarket__block--right {
+        background-color: 01002F;
+        flex-grow: 0;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-width: 0;
+        max-width: 922px;
+        margin-left: 20px;
+    }
+
+    .homemarket__block--right__buttonline__button--first {
+        max-width: 320px;
+        height:70px;
+        align-self: flex-start;
+        font-size: 1.5em;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        background-color: #8D8CDA;
+        border: 0px #8D8CDA solid;
+        border-radius: 80px;
+        transition: all 0.3s ease;
+        margin-left: 20px;
+    }
+}
 
     @keyframes left-appear-in {
     0% {

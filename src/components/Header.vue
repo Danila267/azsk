@@ -274,4 +274,86 @@ export default {
         filter: brightness(80%);
     }
 
+
+
+
+@media (max-width: 880px) { // adjust breakpoint as needed
+
+    .header__upper-part {
+        flex-wrap: wrap;
+        height: 11.5em;
+        // width: 100vw;
+        justify-content: center;
+    }
+
+    .header__upper-part--first {
+        // min-width: 448.5px;
+        min-width: 100vw;
+        // flex-basis: 350px;
+        // max-width: 22.5em;
+        // width: 448.5px;
+        // background-color: black;
+        background-color: #FFFFFF;
+        position: relative;
+        align-items: center;
+        // flex-shrink: 0;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .header__upper-part__logo-block {
+        width: 22.5em;
+        // flex-shrink: 0;
+        position: relative;
+        flex-grow: 1;
+        height: 162%;
+        left: 7%;
+        // background-color: purple;
+        background-color: #FFFFFF;
+        // position: relative;
+        // align-self: center;
+        z-index: 500;
+    }
+
+    .header__upper-part__logo-block__img {
+        width: 100%;
+        position: absolute;
+        top: 7%;
+        z-index: 600;
+        left: 0%;
+        // right: 35%;
+        // bottom: 15%;
+        transition: all 0.3s ease;
+    }
+
+    .header__upper-part--second {
+        background-color: #FFFFFF;
+        // flex-grow: 0.6;
+        // flex-shrink: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        // flex-wrap: wrap;
+        // min-width: 0;
+    }
+
+    .header__upper-part--second__column {
+        width: auto;
+        height: 2em;
+        font-size: 1.3em;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 500;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        min-width: 0;
+        transition: all 0.3s ease;
+    }
+
+}
+
+
+
 </style>

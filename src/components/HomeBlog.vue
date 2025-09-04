@@ -67,7 +67,7 @@ export default {
 
     .homeblog {
         width: 100%;
-        height: 80vh;
+        // height: 80vh;
         position: relative;
         display: flex;
         background-color: #01002F;
@@ -217,6 +217,84 @@ export default {
         filter: blur(200px);
         overflow: hidden;
     }
+
+
+    @media (max-width: 880px) { // adjust breakpoint as needed
+    .homeblog__block--right { // ***TODO***
+        // width: 648px;
+        // height: auto;
+        // // flex-shrink: 0;
+        // min-width: 648px;
+        // object-fit: contain;
+        // margin-right: 6em;
+        // animation: animate 5s ease-in-out infinite;
+        // animation-name: anima-homeprice-circle;
+        // animation-duration: 5s;
+        display: none;
+    }
+    .homemarket__block--left__uptitle {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #AAD9D9;
+        font-size: 1.45em;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        margin-left: 20px;
+        margin-top: 150px;
+    }
+    .homeblog__block--left__title {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 3.56em;
+        font-weight: bold;
+        font-family: 'Outfit', sans-serif;
+        padding-left: 20px;
+        padding-top: 0.35em;
+        box-sizing: border-box;
+    }
+
+    .homeblog__block--left__text {
+        max-width: 560px;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 1.25em;
+        font-family: 'Outfit', sans-serif;
+        padding-left: 20px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+    .homeblog__block--left__buttonline {
+        max-width: 650px;
+        height: auto;
+        position: relative;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 60px;
+        background-color: rgba($color: #000000, $alpha: 0);
+    }
+
+    .homeblog__block--left__buttonline__button--first {
+        max-width: 320px;
+        height:70px;
+        align-self: flex-start;
+        font-size: 1.5em;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        background-color: #8D8CDA;
+        border: 0px #8D8CDA solid;
+        border-radius: 80px;
+        transition: all 0.3s ease;
+        margin-left: 20px;
+    }
+}
 
     @keyframes left-appear-in {
     0% {
