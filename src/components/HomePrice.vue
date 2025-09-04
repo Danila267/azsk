@@ -66,6 +66,7 @@ export default {
         background-color: #01002F;
         justify-content: center;
         align-items: flex-start;
+        
     }
     .homeprice__block {
         max-width: 1690px;
@@ -280,6 +281,9 @@ export default {
         border-radius: 80px;
         background-color: #01002F;
         transition: all 0.3s ease;
+    }
+    .homeprice__light {
+        display: none;
     }
 }
     

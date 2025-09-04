@@ -67,6 +67,7 @@ export default {
         background-color: #01002F;
         justify-content: center;
         align-items: flex-start;
+        
     }
     .homemarket__block {
         max-width: 1690px;
