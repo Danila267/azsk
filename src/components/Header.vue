@@ -281,7 +281,8 @@ export default {
 
     .header__upper-part {
         flex-wrap: wrap;
-        height: 11.5em;
+        // height: 11.5em;
+        height: 5em;
         // width: 100vw;
         justify-content: center;
     }
@@ -336,6 +337,7 @@ export default {
         align-items: center;
         // flex-wrap: wrap;
         // min-width: 0;
+        display: none;
     }
 
     .header__upper-part--second__column {
@@ -350,6 +352,32 @@ export default {
         top: 15%;
         min-width: 0;
         transition: all 0.3s ease;
+    }
+
+    .header__lower-part {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0%;
+        // background-color: green;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 300;
+    }
+
+    .header__lower-part--first {
+        display: none;
+    }
+
+    .header__lower-part--third {
+        display: none;
+    }
+
+    .header__lower-part--second__search {
+        margin-left: 12px;
+        margin-right: 12px;
     }
 
 }
