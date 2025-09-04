@@ -110,7 +110,7 @@ export default {
         z-index: 500;
     }
     .header__upper-part__logo-block__img {
-        width: 100%;
+        width: 17em;
         position: absolute;
         top: 20%;
         z-index: 600;
@@ -302,12 +302,12 @@ export default {
     }
 
     .header__upper-part__logo-block {
-        width: 22.5em;
+        width: 100vw;
         // flex-shrink: 0;
         position: relative;
         flex-grow: 1;
         height: 162%;
-        left: 7%;
+        // left: 7%;
         // background-color: purple;
         background-color: #FFFFFF;
         // position: relative;
@@ -316,11 +316,11 @@ export default {
     }
 
     .header__upper-part__logo-block__img {
-        width: 100%;
+        width: 22.5em;
         position: absolute;
         top: 7%;
         z-index: 600;
-        left: 0%;
+        left: 7%;
         // right: 35%;
         // bottom: 15%;
         transition: all 0.3s ease;
