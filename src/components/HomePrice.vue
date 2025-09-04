@@ -223,7 +223,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 5.4em;
+        font-size: 5em;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
@@ -236,7 +236,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.2em;
+        font-size: 1.15em;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
         padding-top: 15px;
@@ -248,13 +248,14 @@ export default {
         height: auto;
         position: relative;
         display: flex;
-        margin-left: 20px;
+        margin-left: 8px;
         margin-top: 60px;
+        gap: 16px;
         background-color: rgba($color: #000000, $alpha: 0);
     }
 
     .homeprice__block--left__buttonline__button--first {
-        max-width: 160px;
+        max-width: 190px;
         height:70px;
         align-self: flex-start;
         font-size: 1.3em;
@@ -268,7 +269,7 @@ export default {
     }
 
     .homeprice__block--left__buttonline__button--second { 
-        max-width: 200px;
+        max-width: 280px;
         height: 70px;
         margin-left: auto;
         font-size: 1.3em;

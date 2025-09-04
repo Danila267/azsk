@@ -117,7 +117,7 @@ export default {
         position: relative;
         display: flex;
         color: #AAD9D9;
-        font-size: 1.45em;
+        font-size: 1.35em;
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
         margin-top: 100px;
@@ -128,7 +128,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 3.56em;
+        font-size: 3.26em;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
         // font-family: PT+Sans, 'Source Sans Pro';
@@ -142,7 +142,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.35em;
+        font-size: 1.15em;
         font-family: 'Outfit', sans-serif;
         // padding-left: 130px;
         padding-top: 15px;
@@ -161,7 +161,7 @@ export default {
         max-width: 353px;
         height:80px;
         align-self: flex-start;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: #FFFFFF;
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
