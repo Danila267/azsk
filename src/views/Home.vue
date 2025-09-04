@@ -31,7 +31,8 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  // background-color: blue;
+  background-color: #01002F;
   z-index: 300;
 }
 

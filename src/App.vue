@@ -17,6 +17,10 @@ export default {
   margin: 0;
   padding: 0;
   width: 100%;
+  
+}
+body {
+  background-color: #01002F;
 }
 section {
   height: 100vh;
