@@ -341,13 +341,13 @@ export default {
     .header__upper-part--second__column {
         width: auto;
         height: 2em;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-family: 'Outfit', sans-serif;
         font-weight: 500;
         position: relative;
         justify-content: center;
         align-items: center;
-        top: 10%;
+        top: 15%;
         min-width: 0;
         transition: all 0.3s ease;
     }
