@@ -236,7 +236,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.25em;
+        font-size: 1.2em;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
         padding-top: 15px;
@@ -254,10 +254,10 @@ export default {
     }
 
     .homeprice__block--left__buttonline__button--first {
-        max-width: 200px;
+        max-width: 160px;
         height:70px;
         align-self: flex-start;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: #FFFFFF;
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
@@ -268,10 +268,10 @@ export default {
     }
 
     .homeprice__block--left__buttonline__button--second { 
-        max-width: 250px;
+        max-width: 200px;
         height: 70px;
         margin-left: auto;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: #FFFFFF;
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
