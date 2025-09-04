@@ -216,6 +216,44 @@ export default {
         margin-left: 20px;
     }
 
+    .homemarket__block--right__uptitle {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #AAD9D9;
+        font-size: 1.3em;
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        margin-top: 100px;
+    }
+    .homemarket__block--right__title {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 3.06em;
+        font-weight: bold;
+        font-family: 'Outfit', sans-serif;
+        // font-family: PT+Sans, 'Source Sans Pro';
+        // padding-left: 1.5em;
+        padding-top: 0.35em;
+        box-sizing: border-box;
+    }
+    .homemarket__block--right__text {
+        max-width: 640px;
+        height: auto;
+        position: relative;
+        display: flex;
+        color: #FFFFFF;
+        font-size: 1.12em;
+        font-family: 'Outfit', sans-serif;
+        // padding-left: 130px;
+        padding-top: 15px;
+        box-sizing: border-box;
+    }
+
     .homemarket__block--right__buttonline__button--first {
         max-width: 320px;
         height:70px;

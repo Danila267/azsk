@@ -238,7 +238,7 @@ export default {
         position: relative;
         display: flex;
         color: #AAD9D9;
-        font-size: 1.35em;
+        font-size: 1.3em;
         font-weight: 600;
         font-family: 'Outfit', sans-serif;
         margin-left: 20px;
@@ -250,7 +250,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 3.26em;
+        font-size: 3.06em;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
@@ -264,7 +264,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.15em;
+        font-size: 1.12em;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
         padding-top: 15px;

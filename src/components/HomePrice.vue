@@ -224,7 +224,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 5em;
+        font-size: 4.7em;
         font-weight: bold;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
@@ -237,7 +237,7 @@ export default {
         position: relative;
         display: flex;
         color: #FFFFFF;
-        font-size: 1.15em;
+        font-size: 1.12em;
         font-family: 'Outfit', sans-serif;
         padding-left: 20px;
         padding-top: 15px;
@@ -245,7 +245,7 @@ export default {
     }
 
     .homeprice__block--left__buttonline {
-        max-width: 470px;
+        max-width: 450px;
         height: auto;
         position: relative;
         display: flex;
