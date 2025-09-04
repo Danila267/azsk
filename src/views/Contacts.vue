@@ -231,6 +231,20 @@ export default {
 
 
 @media (max-width: 880px) { // adjust breakpoint as needed
+.contacts__block__list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    // background-color: red;
+    background-color: #ffffff;
+    margin-top: 2em;
+    gap: 5px;
+    flex-wrap: wrap;
+}
 
 .contacts__block__list__item {
   flex-basis: 574px;
@@ -276,7 +290,7 @@ export default {
     color: #FFFFFF;
     font-size: 2.1em;
     font-weight: bold;
-    line-height: 1.15em;
+    line-height: 1.18em;
     font-family: 'Outfit', sans-serif;
     padding-left: 0.35em;
     // padding-top: 0.35em;
@@ -290,7 +304,7 @@ export default {
     position: relative;
     display: flex;
     color: #FFFFFF;
-    font-size: 1.2em;
+    font-size: 1.18em;
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
     text-decoration: none;
